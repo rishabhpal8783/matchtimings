@@ -1,0 +1,2 @@
+[16-Sep-2021 07:21:08 America/New_York] PHP Warning:  require(/home/matcuned/public_html/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home/matcuned/public_html/public/index.php on line 34
+[16-Sep-2021 07:21:08 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/matcuned/public_html/public/../vendor/autoload.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/matcuned/public_html/public/index.php on line 34
