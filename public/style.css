@@ -500,16 +500,18 @@ address {
 .sportsmagazine-logo:before {
     content: '';
     position: absolute;
-    right: -80px;
-    top: -8px;
-    height: 74px;
+    right: -65px;
+    top: 15px;
+    height: 71px;
     width: 3px;
     background-color: #333;
-    -webkit-transform: rotate(34deg);
+    -webkit-transform: rotate(
+34deg);
     -moz-transform: rotate(34deg);
     -ms-transform: rotate(34deg);
     -o-transform: rotate(34deg);
-    transform: rotate(34deg);
+    transform: rotate(
+34deg);
 }
 
 
