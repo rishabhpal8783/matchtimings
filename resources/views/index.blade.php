@@ -10,9 +10,123 @@
     <div class="sportsmagazine-main-section">
         <div class="container">
             <div class="row">
+                <div class="col-sm-12">
+
+                    <!--// Widget Trending News \\-->
+                    <div class="widget widget_trending_news">
+                        <div class="sportsmagazine-fancy-title">
+                            <h2>Schedules</h2>
+                        </div>
+                        <!-- Nav tabs -->
+
+                        <ul class="nav-tabs" role="tablist">
+                            <li role="presentation" class="schedules_tab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">IPL 2021</a></li>
+                            <li role="presentation" class="schedules_tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">T20 World Cup</a></li>
+                            <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
+                        </ul>
+                        <div class="main_shdl">
+                            <a href="{{url('schedule')}}" class="ticket-buy-btn btn_shdl">Full Schedules</a>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content on_ho">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <!--// Main Section \\-->
+                                <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
+                                    <ul class="row">
+                                        <li class="col-md-12">
+                                            <div class="sportsmagazine-fixture-wrap">
+                                                <div class="sportsmagazine-teams-match">
+                                                    <div class="sportsmagazine-first-team">
+                                                        <figure><img src="{{url('assets/extra-images/team-match-img1.png')}}" alt=""></figure>
+                                                        <div class="sportsmagazine-first-team-info">
+                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
+                                                            <span>Bepop Institute</span>
+                                                            <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sportsmagazine-match-view">
+                                                        <span>VS</span>
+                                                    </div>
+                                                    <div class="sportsmagazine-second-team">
+                                                        <figure><img src="{{url('assets/extra-images/team-match-img2.png')}}" alt=""></figure>
+                                                        <div class="sportsmagazine-second-team-info">
+                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
+                                                            <span>Marine College</span>
+                                                            <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sportsmagazine-buy-ticket">
+                                                    <div class="sportsmagazine-buy-ticket-text">
+                                                        <time datetime="2008-02-14 20:00" class="dt"><a href="#">August 21st, 2017</a> <span><a href="#">@ 9:00 PM</a></span></time>
+                                                        <h5><a href="#">Country Durham, UK</a></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--// Main Section \\-->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <div class="widget_popular_news">
+                                    <ul>
+                                        <li class="widget-injuries">
+                                            <div class="popular_news_text">
+                                                <small>Injuries</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="popular_news_text">
+                                                <small>The Team</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                                <div class="widget_popular_news">
+                                    <ul>
+                                        <li class="widget-theleague">
+                                            <div class="popular_news_text">
+                                                <small>The League</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="popular_news_text">
+                                                <small>The Team</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                        <li class="widget-injuries">
+                                            <div class="popular_news_text">
+                                                <small>Injuries</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// Widget Trending News \\-->
+                </div>
                 <div class="col-md-12">
 
-                    <div class="sportsmagazine-fixture-slider">
+                    <div class="sportsmagazine-fixture-slider" style="display: none;">
 
                         <div class="sportsmagazine-fixture-slider-layer">
                             <time datetime="2008-02-14 20:00">August 23, 2016</time>
@@ -207,210 +321,6 @@
 
                 </aside>
                 <!--// SideBaar \\-->
-
-                <div class="col-sm-12">
-
-                    <!--// Widget Trending News \\-->
-                    <div class="widget widget_trending_news">
-                        <div class="sportsmagazine-fancy-title">
-                            <h2>Schedules</h2>
-                        </div>
-                        <!-- Nav tabs -->
-
-                        <ul class="nav-tabs" role="tablist">
-                            <li role="presentation" class="schedules_tab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">IPL 2021</a></li>
-                            <li role="presentation" class="schedules_tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">T20 World Cup</a></li>
-                            <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
-                        </ul>
-                        <div class="main_shdl">
-                            <a href="{{url('schedule')}}" class="ticket-buy-btn btn_shdl">Full Schedules</a>
-                        </div>
-                        <!-- Tab panes -->
-                        <div class="tab-content on_ho">
-                            <div role="tabpanel" class="tab-pane active" id="home">
-                                <!--// Main Section \\-->
-                                <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
-                                    <ul class="row">
-                                        <li class="col-md-12">
-                                            <div class="sportsmagazine-fixture-wrap">
-                                                <div class="sportsmagazine-teams-match">
-                                                    <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img1.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sportsmagazine-match-view">
-                                                        <span>VS</span>
-                                                    </div>
-                                                    <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img2.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sportsmagazine-buy-ticket">
-                                                    <div class="sportsmagazine-buy-ticket-text">
-                                                        <h5>Country Durham, UK</h5>
-                                                        <time datetime="2008-02-14 20:00">August 21st, 2017 <span>@ 9:00 PM</span></time>
-                                                    </div>
-                                                    <a href="#" class="ticket-buy-btn">View Roster</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="col-md-12">
-                                            <div class="sportsmagazine-fixture-wrap">
-                                                <div class="sportsmagazine-teams-match">
-                                                    <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img3.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sportsmagazine-match-view">
-                                                        <span>VS</span>
-                                                    </div>
-                                                    <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img4.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sportsmagazine-buy-ticket">
-                                                    <div class="sportsmagazine-buy-ticket-text">
-                                                        <h5>Country Durham, UK</h5>
-                                                        <time datetime="2008-02-14 20:00">August 21st, 2017 <span>@ 9:00 PM</span></time>
-                                                    </div>
-                                                    <a href="#" class="ticket-buy-btn">View Roster</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="col-md-12">
-                                            <div class="sportsmagazine-fixture-wrap">
-                                                <div class="sportsmagazine-teams-match">
-                                                    <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img2.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sportsmagazine-match-view">
-                                                        <span>VS</span>
-                                                    </div>
-                                                    <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img3.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sportsmagazine-buy-ticket">
-                                                    <div class="sportsmagazine-buy-ticket-text">
-                                                        <h5>Country Durham, UK</h5>
-                                                        <time datetime="2008-02-14 20:00">August 21st, 2017 <span>@ 9:00 PM</span></time>
-                                                    </div>
-                                                    <a href="#" class="ticket-buy-btn">View Roster</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="col-md-12">
-                                            <div class="sportsmagazine-fixture-wrap">
-                                                <div class="sportsmagazine-teams-match">
-                                                    <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img4.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sportsmagazine-match-view">
-                                                        <span>VS</span>
-                                                    </div>
-                                                    <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img1.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sportsmagazine-buy-ticket">
-                                                    <div class="sportsmagazine-buy-ticket-text">
-                                                        <h5>Country Durham, UK</h5>
-                                                        <time datetime="2008-02-14 20:00">August 21st, 2017 <span>@ 9:00 PM</span></time>
-                                                    </div>
-                                                    <a href="fixture.html" class="ticket-buy-btn">View Roster</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--// Main Section \\-->
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="profile">
-                                <div class="widget_popular_news">
-                                    <ul>
-                                        <li class="widget-injuries">
-                                            <div class="popular_news_text">
-                                                <small>Injuries</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="popular_news_text">
-                                                <small>The Team</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="messages">
-                                <div class="widget_popular_news">
-                                    <ul>
-                                        <li class="widget-theleague">
-                                            <div class="popular_news_text">
-                                                <small>The League</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="popular_news_text">
-                                                <small>The Team</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                        <li class="widget-injuries">
-                                            <div class="popular_news_text">
-                                                <small>Injuries</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// Widget Trending News \\-->
-                </div>
 
                 <!--// Content \\-->
                 <div class="col-md-8">

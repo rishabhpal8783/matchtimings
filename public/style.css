@@ -6051,7 +6051,7 @@ blockquote span:before {
 
 .sportsmagazine-first-team-info>span,
 .sportsmagazine-second-team-info>span {
-    display: inline-block;
+    display: block;
     font-size: 10px;
     color: #292c31;
 }
@@ -6080,14 +6080,35 @@ blockquote span:before {
 }
 
 .sportsmagazine-buy-ticket-text h5 {
-    font-weight: bold;
+    font-weight: bolder;
     margin: 0px 0px 4px;
+    font-size: 15px;
+}
+span.view_all {
+    margin-top: 10px;
+}
+span.view_all a {
+    text-align: center;
+    color: #000;
+    font-size: 11px;
+    font-weight: 600;
+}
+span.view_all:hover {
+    color: #ffdc11;
+    
+}
+span.view_all a:hover {
+   color: #ffdc11;
+}
+a:hover {
+   color: #ffdc11;
 }
 
 .sportsmagazine-buy-ticket-text time {
-    font-size: 12px;
+    font-size: 18px;
     color: #292c31;
     float: left;
+    font-weight: 600;
 }
 
 .sportsmagazine-buy-ticket-text time span {

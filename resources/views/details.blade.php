@@ -34,6 +34,9 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 					<div class="row">
 
                         <div class="col-md-9">
+                            <div class="main_img_blg">
+                                <img src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c213136/virat-kohli-to-step-down-as-t2.jpg" width="100%">
+                            </div>
                             <div class="sportsmagazine-rich-editor">
                                 <blockquote>{{$articles_data->summary_outline_description}}
                                     <span></span>
@@ -87,7 +90,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                                 <ul class="row">
                                     @foreach($articles_latest_data as $data)
                                     <li class="col-md-4">
-                                        <figure><a href="{{url('details/'.$data->article_id)}}"><img src="extra-images/related-articel-img1.jpg" alt=""></a></figure>
+                                        <figure><a href="{{url('details/'.$data->article_id)}}"><img src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c213136/virat-kohli-to-step-down-as-t2.jpg" alt=""></a></figure>
                                         <div class="sportsmagazine-article-text">
                                              <time datetime="2008-02-14 20:00">{{date('d F Y | H:i:s', strtotime($data->created));}}</time>
                                              <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
