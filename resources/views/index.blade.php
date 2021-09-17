@@ -223,7 +223,7 @@
                             <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
                         </ul>
                         <div class="main_shdl">
-                            <a href="#" class="ticket-buy-btn btn_shdl">Full Schedules</a>
+                            <a href="{{url('schedule')}}" class="ticket-buy-btn btn_shdl">Full Schedules</a>
                         </div>
                         <!-- Tab panes -->
                         <div class="tab-content on_ho">
@@ -652,14 +652,14 @@
 
                                 <li class="col-md-4 sportsmagazine-the-team">
                                     <figure>
-                                        <a href="blog-detail.html"><img src="http://localhost/admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
+                                        <a href="{{url('details/'.$data->article_id)}}"><img src="http://localhost/admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
                                         <figcaption>
                                             {{-- <span><small>The Team</small></span> --}}
                                             {{-- <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a> --}}
                                         </figcaption>
                                     </figure>
                                     <section>
-                                        <h2><a href="blog-detail.html">{{$data->heading1}}</a></h2>
+                                        <h2><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
                                         <p>{{substr($data->summary_outline_description,0,157)}}</p>
                                     </section>
                                     <div class="sportsmagazine-blog-grid-options">
@@ -706,9 +706,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <h5><a href="#">{{$data->heading1}}</a></h5>
+                                            <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
                                             <span class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </span>
-                                            <p>{{substr($data->summary_outline_description,0,157)}}...<a href="#">Read More [+]</a></p>
+                                            <p>{{substr($data->summary_outline_description,0,157)}}...<a href="{{url('details/'.$data->article_id)}}">Read More [+]</a></p>
                                         </div>
                                     </div>
                                 </div>

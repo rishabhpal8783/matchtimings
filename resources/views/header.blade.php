@@ -106,44 +106,7 @@
                                                 </ul>
                                             </li>
                                             @endforeach
-                                            <li class="sportsmagazine-megamenu-li"><a href="#">Football</a>
-                                                <ul class="sportsmagazine-megamenu">
-                                                    <li class="row mega_innr">
-                                                        <div class="col-md-4">
-                                                            <h4>IPL</h4>
-                                                            <ul class="sportsmagazine-megalist">
-                                                                <li><a href="#">IPL 2021</a></li>
-                                                                <li><a href="#">IPL 2020</a></li>
-                                                                <li><a href="#">IPL 2019</a></li>
-                                                                <li><a href="#">IPL 2018</a></li>
-                                                                <li><a href="#">IPL 2017</a></li>
-                                                                <li><a href="#">IPL 2016</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h4>T20 World Cup</h4>
-                                                            <ul class="sportsmagazine-megalist">
-                                                                <li><a href="#">IPL 2021</a></li>
-                                                                <li><a href="#">IPL 2020</a></li>
-                                                                <li><a href="#">IPL 2019</a></li>
-                                                                <li><a href="#">IPL 2018</a></li>
-                                                                <li><a href="#">IPL 2017</a></li>
-                                                                <li><a href="#">IPL 2016</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h4>Test Series</h4>
-                                                            <ul class="sportsmagazine-megalist">
-                                                                <li><a href="#">IPL 2021</a></li>
-                                                                <li><a href="#">IPL 2020</a></li>
-                                                                <li><a href="#">IPL 2019</a></li>
-                                                                <li><a href="#">IPL 2018</a></li>
-                                                                <li><a href="#">IPL 2017</a></li>
-                                                                <li><a href="#">IPL 2016</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                          </ul>
                                             </li>
                                         </ul>
                                     </div>

@@ -20,6 +20,7 @@ class ArticlesController extends Controller
        $sports_data=Sports::all();
        
        $articles_data=Articles::latest('created')->get();
+    
        $articles_latest_data=Articles::latest('created')->limit(10)->get();
        $article_mapping=Articlecountrymapping::all();
        $article_type=Articletype::all(); 
@@ -38,7 +39,8 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        $sports_data=Sports::all();
+        return view('schedule',compact('sports_data'));
     }
 
     /**
@@ -60,7 +62,14 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        //
+        $articles_data=Articles::where('article_id',$id)->first();
+        //dd($articles_data);
+        $sports_data=Sports::all(); 
+        $article_type=Articletype::all();
+        //dd($article_type);
+        $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
+       // dd($articles_latest_data);
+        return view('details',compact('sports_data','articles_data','articles_latest_data','article_type'));
     }
 
     /**
@@ -71,7 +80,7 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

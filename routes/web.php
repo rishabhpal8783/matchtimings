@@ -16,6 +16,6 @@ use App\Http\Controllers\ArticlesController;
 
 
 Route::get('/',[ArticlesController::class,'index']);
-Route::get('schedule',function(){
-    return view('schedule');
-});
+Route::get('schedule',[ArticlesController::class,'create'])->name('schedule');
+Route::get('details/{id}',[ArticlesController::class,'show'])->name('details');
+
