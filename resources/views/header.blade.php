@@ -70,7 +70,7 @@
                 <div class="container">
                     <div class="row">
                         <aside class="col-md-2">
-                            <a href="index-2.html" class="sportsmagazine-logo"><img src="assets/images/logo-1.png" alt=""></a>
+                            <a href="index-2.html" class="sportsmagazine-logo"><img src="assets/images/mt_logo.png" alt=""></a>
                         </aside>
                         <div class="col-md-10">
                             <div class="sportsmagazine-right-section">
