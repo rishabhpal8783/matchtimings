@@ -7,6 +7,7 @@ use App\Models\Articlecountrymapping;
 use App\Models\Articles;
 use App\Models\Articletype;
 use App\Models\Sports;
+use App\Models\Schedules;
 
 class ArticlesController extends Controller
 {
@@ -18,17 +19,13 @@ class ArticlesController extends Controller
     public function index()
     {
        $sports_data=Sports::all();
-       
+       $schedule_data=Schedules::all();
        $articles_data=Articles::latest('created')->get();
-    
        $articles_latest_data=Articles::latest('created')->limit(10)->get();
        $article_mapping=Articlecountrymapping::all();
        $article_type=Articletype::all(); 
-       
        $article_type1=Articletype::where('article_type_name','Recent News')->first();
-      
        $recent_stories_data=Articletype::where('article_type_name','Recent Stories')->first(); 
-       
        return view('index',compact('articles_data','article_mapping','article_type','article_type1','sports_data','recent_stories_data','articles_latest_data'));
     }
 
@@ -40,6 +37,18 @@ class ArticlesController extends Controller
     public function create()
     {
         $sports_data=Sports::all();
+       // dd($sports_data);
+        // foreach($sports_data as $data)
+        // {
+        //     foreach($data->league as $leag)
+        //     {
+        //        foreach($leag->event as $events)
+        //        {
+        //            print_r($events);
+        //        }
+        //     }
+        // }die;
+        $schedule_data=Schedules::all();
         return view('schedule',compact('sports_data'));
     }
 

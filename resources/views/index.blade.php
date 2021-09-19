@@ -196,7 +196,7 @@
                         @foreach($articles_latest_data as $data)
                         @if($recent_stories_data->article_type_id==$data->article_type_id)
                         <div class="sportsmagazine-featured-slider-layer">
-                            <img src="http://localhost/admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
+                            <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
                             <span class="sportsmagazine-black-transparent"></span>
                             <div class="sportsmagazine-featured-caption">
                                 <h2>{{$data->heading1}}</h2>
@@ -562,7 +562,7 @@
 
                                 <li class="col-md-4 sportsmagazine-the-team">
                                     <figure>
-                                        <a href="{{url('details/'.$data->article_id)}}"><img src="http://localhost/admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
+                                        <a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/article/{{$data->image}}" alt="{{$data->image}}"></a>
                                         <figcaption>
                                             {{-- <span><small>The Team</small></span> --}}
                                             {{-- <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a> --}}
@@ -611,7 +611,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="img-hover">
-                                                <img src="http://localhost/admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}" class="img-responsive">
+                                                <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}" class="img-responsive">
                                                 <div class="overlay"><a href="#">+</a></div>
                                             </div>
                                         </div>
