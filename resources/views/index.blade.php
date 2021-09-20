@@ -19,11 +19,11 @@
                         </div>
                         <!-- Nav tabs -->
 
-                        <ul class="nav-tabs" role="tablist">
+                        {{-- <ul class="nav-tabs" role="tablist">
                             <li role="presentation" class="schedules_tab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">IPL 2021</a></li>
                             <li role="presentation" class="schedules_tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">T20 World Cup</a></li>
                             <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
-                        </ul>
+                        </ul> --}}
                         <div class="main_shdl">
                             <a href="{{url('schedule')}}" class="ticket-buy-btn btn_shdl">Full Schedules</a>
                         </div>
@@ -33,14 +33,15 @@
                                 <!--// Main Section \\-->
                                 <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
                                     <ul class="row">
+                                        @foreach( $schedule_data as $data)
                                         <li class="col-md-12">
                                             <div class="sportsmagazine-fixture-wrap">
                                                 <div class="sportsmagazine-teams-match">
                                                     <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img1.png')}}" alt=""></figure>
+                                                        <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
                                                         <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
+                                                            <h6><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
+                                                            {{-- <span>Bepop Institute</span> --}}
                                                             <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>
                                                     </div>
@@ -48,22 +49,24 @@
                                                         <span>VS</span>
                                                     </div>
                                                     <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img2.png')}}" alt=""></figure>
+                                                        <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
                                                         <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
+                                                            <h6><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
+                                                            {{-- <span>Marine College</span> --}}
                                                             <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="sportsmagazine-buy-ticket">
                                                     <div class="sportsmagazine-buy-ticket-text">
-                                                        <time datetime="2008-02-14 20:00" class="dt"><a href="#">August 21st, 2017</a> <span><a href="#">@ 9:00 PM</a></span></time>
-                                                        <h5><a href="#">Country Durham, UK</a></h5>
+                                                        <time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
+                                                        <h5><a href="#">{{$data->countries->name}}</a></h5>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
+                                       @endforeach
+
                                     </ul>
                                 </div>
                                 <!--// Main Section \\-->
@@ -199,7 +202,7 @@
                             <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
                             <span class="sportsmagazine-black-transparent"></span>
                             <div class="sportsmagazine-featured-caption">
-                                <h2>{{$data->heading1}}</h2>
+                                <h2><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
                                 <span class="sportsmagazine-color">{{date('d F Y | H:i:s', strtotime($data->created));}} / {{$data->published_by}}</span>
                             </div>
                         </div>
@@ -562,7 +565,7 @@
 
                                 <li class="col-md-4 sportsmagazine-the-team">
                                     <figure>
-                                        <a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/article/{{$data->image}}" alt="{{$data->image}}"></a>
+                                        <a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
                                         <figcaption>
                                             {{-- <span><small>The Team</small></span> --}}
                                             {{-- <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a> --}}

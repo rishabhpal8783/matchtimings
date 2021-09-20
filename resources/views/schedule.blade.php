@@ -27,45 +27,15 @@
                                 <!--// Main Section \\-->
                                 <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
                                     <ul class="row">
-                                       <li class="col-md-12">
-                                            <div class="sportsmagazine-fixture-wrap">
-                                                <div class="sportsmagazine-teams-match">
-                                                    <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img1.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
-                                                            <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sportsmagazine-match-view">
-                                                        <span>VS</span>
-                                                    </div>
-                                                    <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img2.png')}}" alt=""></figure>
-                                                        <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
-                                                            <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sportsmagazine-buy-ticket">
-                                                    <div class="sportsmagazine-buy-ticket-text">
-                                                        <time datetime="2008-02-14 20:00" class="dt"><a href="#">August 21st, 2017</a> <span><a href="#">@ 9:00 PM</a></span></time>
-                                                        <h5><a href="#">Country Durham, UK</a></h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                        @foreach( $schedule_data as $data)
                                         <li class="col-md-12">
                                             <div class="sportsmagazine-fixture-wrap">
                                                 <div class="sportsmagazine-teams-match">
                                                     <div class="sportsmagazine-first-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img1.png')}}" alt=""></figure>
+                                                        <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
                                                         <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">Yorkshire</a></h6>
-                                                            <span>Bepop Institute</span>
+                                                            <h6><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
+                                                            {{-- <span>Bepop Institute</span> --}}
                                                             <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>
                                                     </div>
@@ -73,22 +43,24 @@
                                                         <span>VS</span>
                                                     </div>
                                                     <div class="sportsmagazine-second-team">
-                                                        <figure><img src="{{url('assets/extra-images/team-match-img2.png')}}" alt=""></figure>
+                                                        <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
                                                         <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">Sharks Club</a></h6>
-                                                            <span>Marine College</span>
+                                                            <h6><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
+                                                            {{-- <span>Marine College</span> --}}
                                                             <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="sportsmagazine-buy-ticket">
                                                     <div class="sportsmagazine-buy-ticket-text">
-                                                        <time datetime="2008-02-14 20:00" class="dt"><a href="#">August 21st, 2017</a> <span><a href="#">@ 9:00 PM</a></span></time>
-                                                        <h5><a href="#">Country Durham, UK</a></h5>
+                                                        <time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
+                                                        <h5><a href="#">{{$data->countries->name}}</a></h5>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
+                                       @endforeach
+
                                     </ul>
                                 </div>
                                 <!--// Main Section \\-->

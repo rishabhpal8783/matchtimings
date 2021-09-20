@@ -19,14 +19,14 @@ class ArticlesController extends Controller
     public function index()
     {
        $sports_data=Sports::all();
-       $schedule_data=Schedules::all();
+       $schedule_data=Schedules::latest('created')->limit(5)->get();
        $articles_data=Articles::latest('created')->get();
        $articles_latest_data=Articles::latest('created')->limit(10)->get();
        $article_mapping=Articlecountrymapping::all();
        $article_type=Articletype::all(); 
        $article_type1=Articletype::where('article_type_name','Recent News')->first();
        $recent_stories_data=Articletype::where('article_type_name','Recent Stories')->first(); 
-       return view('index',compact('articles_data','article_mapping','article_type','article_type1','sports_data','recent_stories_data','articles_latest_data'));
+       return view('index',compact('articles_data','article_mapping','article_type','article_type1','sports_data','recent_stories_data','articles_latest_data','schedule_data'));
     }
 
     /**
@@ -48,8 +48,8 @@ class ArticlesController extends Controller
         //        }
         //     }
         // }die;
-        $schedule_data=Schedules::all();
-        return view('schedule',compact('sports_data'));
+        $schedule_data=Schedules::latest('created')->get();
+        return view('schedule',compact('sports_data','schedule_data'));
     }
 
     /**

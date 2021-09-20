@@ -7,7 +7,7 @@
             <div class="row">
                 <!--// Widget Contact Info \\-->
                 <aside class="col-md-4 widget widget_contact_info">
-                    <a href="index-2.html" class="footer-logo"><img src="{{url('assets/images/logo-1.png')}}" alt=""></a>
+                    <a href="index-2.html" class="footer-logo"><img src="{{url('assets/images/mt_logo.png')}}" alt=""></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elUt ac malesuada ante.Sed gravida, ur quis tempus sollicitudin, tellus urna</p>
                     <ul class="sportsmagazine-social-network">
                         <li>
