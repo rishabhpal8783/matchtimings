@@ -40,7 +40,7 @@
                                                     <div class="sportsmagazine-first-team">
                                                         <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
                                                         <div class="sportsmagazine-first-team-info">
-                                                            <h6><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
+                                                            <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
                                                             {{-- <span>Bepop Institute</span> --}}
                                                             <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>
@@ -51,7 +51,7 @@
                                                     <div class="sportsmagazine-second-team">
                                                         <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
                                                         <div class="sportsmagazine-second-team-info">
-                                                            <h6><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
+                                                            <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
                                                             {{-- <span>Marine College</span> --}}
                                                             <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>

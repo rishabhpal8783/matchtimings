@@ -7346,8 +7346,10 @@ a:hover {
 }
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-first-team {
-    padding: 28px 10px 29px 20px;
+    padding: 28px 10px 39px 20px;
     margin: 0px;
+    width: 42%;
+    height: 120px;
 }
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-match-view h5 {
@@ -7356,8 +7358,20 @@ a:hover {
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-second-team {
     float: right;
-    padding: 28px 10px 29px 8px;
+    padding: 28px 10px 39px 8px;
     margin: 0px;
+    width: 42%;
+    height: 120px;
+}
+.sportsmagazine-first-team img {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+}
+.sportsmagazine-second-team img {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
 }
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-second-team:before {
@@ -7371,16 +7385,22 @@ a:hover {
 }
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-teams-match {
-    width: 62%;
+    width: 70%;
 }
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-buy-ticket {
-    width: 38%;
+    width: 30%;
     padding: 34px 10px 0;
+}
+.sportsmagazine-second-team-info h6 {
+    font-size: 13px;
+}
+.sportsmagazine-first-team-info h6 {
+    font-size: 13px;
 }
 
 .sportsmagazine-fixture-mini-list .sportsmagazine-fixture-wrap:before {
-    right: 37%;
+    right: 29%;
     margin: 0px 4px 0px 0px;
 }
 
