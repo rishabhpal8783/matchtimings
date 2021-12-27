@@ -5,197 +5,11 @@
  
 <!--// Main Content \\-->
 <div class="sportsmagazine-main-content">
-        <div class="container" >
+        <div class="container">
             <div class="row">
-
-                <aside class="col-md-3">
-
-                    
-                        <!--// Widget series \\-->
-                        <div class="widget widget_popular_news">
-                                <div class="sportsmagazine-fancy-title"><h2>Recent Series</h2></div>
-                                <ul>
-                                    
-                                    <li>
-                                        <span style="padding-top:0px">01</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">02</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">South Africa VS India</a>
-                                            <time datetime="2008-02-14 20:00">Dec 26, 2021 - Jan 08, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">03</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">04</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                 
-
-                                </ul>
-                            </div>
-                            <!--// Widget Popular News \\-->
-
-                
-                
-                         <!--// Widget TeamRanking \\-->
-                 
-                    <!--// Widget series \\-->
-
-                    <div class="widget widget_trending_news">
-                                <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
-                                <!-- Nav tabs -->
-                                <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
-                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
-                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
-                                </ul>
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="home">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="profile">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="widget widget_next_match">
-                                <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
-                                <div class="widget_next_match_title">
-                                    <h5>Championship Quarter Finals</h5>
-                                    <span>Saturday, May 17th, 2017</span>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-1.png" alt="">
-                                        <h6><a href="fixture-detail.html">Basketball</a></h6>
-                                        <small>Sports And Magazine</small>
-                                    </li>
-                                    <li>
-                                        <div class="widget_next_match_option">
-                                            <h6>09:00 pm</h6>
-                                            <small>Madison Stadium</small>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-2.png" alt="">
-                                        <h6><a href="fixture-detail.html">Combine</a></h6>
-                                        <small>ST Paddy's Institute</small>
-                                    </li>
-                                </ul>
-                                <div class="widget_match_countdown">
-                                    <h6>Game Countdown</h6>
-                                    <div id="sportsmagazine-countdown" class="is-countdown"><span class="countdown-row countdown-show3"><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Minutes</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Seconds</span></span></span></div>
-                                </div>
-                                <a href="fixture.html" class="widget_match_btn">Buy Ticket Now</a>
-                            </div>               
-                
-                </aside> 
-
-
-
-
-
-                 <div class="col-md-6">
+                        <div class="col-md-8">
                             
-                            <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
+                            <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
                             <div class="sportsmagazine-featured-slider">
                                 <div class="sportsmagazine-featured-slider-layer">
@@ -216,120 +30,291 @@
                                 </div>
                             </div>
                             <!--// Featured Slider \\-->
+                          </div>
+                          <aside class="col-md-4">
 
-                            <div class="widget widget_trending_news">
-                                <div class="sportsmagazine-fancy-title">
-                                    <h2 class="inline">Schedules</h2>
-                                    <a href="{{url('schedule')}}" class="schedule-btn inline">Full Schedules</a>
-                                </div>
+                        <!--// Widget TeamRanking \\-->
+                        <div class="widget widget_team_ranking">
+                            <div class="sportsmagazine-fancy-title">
+                                <h2>Advertisement Corner</h2>
+                            </div>
+                            <div class="widget widget_add">
+                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                            </div>
+                        </div>
+                        <!--// Widget TeamRanking \\-->
+
+                        </aside>  
+                           
+            </div>
+        </div>
+    <!--// Main Section \\-->
+    <div class="sportsmagazine-main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+
+                    <!--// Widget Trending News \\-->
+                    <div class="widget widget_trending_news">
+                        <div class="sportsmagazine-fancy-title">
+                            <h2>Schedules</h2>
+                        </div>
                         <!-- Nav tabs -->
 
-                                {{-- <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="schedules_tab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">IPL 2021</a></li>
-                                    <li role="presentation" class="schedules_tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">T20 World Cup</a></li>
-                                    <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
-                                </ul> --}}
-                                <div class="main_shdl">
-                                   
-                                </div>
-                                <!-- Tab panes -->
-                                <div class="tab-content on_ho">
-                                    <div role="tabpanel" class="tab-pane active" id="home">
-                                        <!--// Main Section \\-->
-                                        <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
-                                            <ul class="row">
-                                                @foreach( $schedule_data as $data)
-                                                <li class="col-md-12">
-                                                    <div class="sportsmagazine-fixture-wrap">
-                                                        <div class="sportsmagazine-teams-match">
-                                                            <div class="sportsmagazine-first-team">
-                                                                <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
-                                                                <div class="sportsmagazine-first-team-info">
-                                                                    <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
-                                                                    {{-- <span>Bepop Institute</span> --}}
-                                                                    <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="sportsmagazine-match-view">
-                                                                <span>VS</span>
-                                                            </div>
-                                                            <div class="sportsmagazine-second-team">
-                                                                <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
-                                                                <div class="sportsmagazine-second-team-info">
-                                                                    <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
-                                                                    {{-- <span>Marine College</span> --}}
-                                                                    <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="sportsmagazine-buy-ticket">
-                                                            <div class="sportsmagazine-buy-ticket-text">
-                                                                <time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
-                                                                <h5><a href="#">{{$data->countries->name}}</a></h5>
-                                                            </div>
+                        {{-- <ul class="nav-tabs" role="tablist">
+                            <li role="presentation" class="schedules_tab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">IPL 2021</a></li>
+                            <li role="presentation" class="schedules_tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">T20 World Cup</a></li>
+                            <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
+                        </ul> --}}
+                        <div class="main_shdl">
+                            <a href="{{url('schedule')}}" class="ticket-buy-btn btn_shdl">Full Schedules</a>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content on_ho">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <!--// Main Section \\-->
+                                <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
+                                    <ul class="row">
+                                        @foreach( $schedule_data as $data)
+                                        <li class="col-md-12">
+                                            <div class="sportsmagazine-fixture-wrap">
+                                                <div class="sportsmagazine-teams-match">
+                                                    <div class="sportsmagazine-first-team">
+                                                        <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
+                                                        <div class="sportsmagazine-first-team-info">
+                                                            <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
+                                                            {{-- <span>Bepop Institute</span> --}}
+                                                            <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                         </div>
                                                     </div>
-                                                </li>
-                                            @endforeach
+                                                    <div class="sportsmagazine-match-view">
+                                                        <span>VS</span>
+                                                    </div>
+                                                    <div class="sportsmagazine-second-team">
+                                                        <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
+                                                        <div class="sportsmagazine-second-team-info">
+                                                            <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
+                                                            {{-- <span>Marine College</span> --}}
+                                                            <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sportsmagazine-buy-ticket">
+                                                    <div class="sportsmagazine-buy-ticket-text">
+                                                        <time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
+                                                        <h5><a href="#">{{$data->countries->name}}</a></h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                       @endforeach
 
-                                            </ul>
-                                        </div>
-                                        <!--// Main Section \\-->
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="profile">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </ul>
                                 </div>
+                                <!--// Main Section \\-->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <div class="widget_popular_news">
+                                    <ul>
+                                        <li class="widget-injuries">
+                                            <div class="popular_news_text">
+                                                <small>Injuries</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="popular_news_text">
+                                                <small>The Team</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                                <div class="widget_popular_news">
+                                    <ul>
+                                        <li class="widget-theleague">
+                                            <div class="popular_news_text">
+                                                <small>The League</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="popular_news_text">
+                                                <small>The Team</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                        <li class="widget-injuries">
+                                            <div class="popular_news_text">
+                                                <small>Injuries</small>
+                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!--// Widget Trending News \\-->
+                </div>
+                <div class="col-sm-4">
+                   <!--// Widget Popular News \\-->
+                   <div class="widget widget_popular_news">
+                                <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
+                                <ul>
+                                    <li>
+                                        <span>01</span>
+                                        <div class="popular_news_text">
+                                            <small>The Team</small>
+                                            <a href="blog-detail.html">Basketball Stadium will a max capacity for 5000 fans</a>
+                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                        </div>
+                                    </li>
+                                    <li class="widget-injuries">
+                                        <span>02</span>
+                                        <div class="popular_news_text">
+                                            <small>Injuries</small>
+                                            <a href="blog-detail.html">The Clovers defense must reinvent itself without</a>
+                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                        </div>
+                                    </li>
+                                    <li class="widget-theleague">
+                                        <span>03</span>
+                                        <div class="popular_news_text">
+                                            <small>The League</small>
+                                            <a href="blog-detail.html">Take look to the brand new helmets for next season</a>
+                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>04</span>
+                                        <div class="popular_news_text">
+                                            <small>The Team</small>
+                                            <a href="blog-detail.html">The Basketball women division started training</a>
+                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>05</span>
+                                        <div class="popular_news_text">
+                                            <small>The Team</small>
+                                            <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
+                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--// Widget Popular News \\-->
+
+                
+                
+                        <div class="col-md-12">
+
+                    <div class="sportsmagazine-fixture-slider" style="display: none;">
+
+                        <div class="sportsmagazine-fixture-slider-layer">
+                            <time datetime="2008-02-14 20:00">August 23, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child">ARS <span>03</span></li>
+                                <li>CHL <span>02</span></li>
+                            </ul>
+                        </div>
+                        <div class="sportsmagazine-fixture-slider-layer">
+                            <time datetime="2008-02-14 20:00">August 25, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child">BRC <span>05</span></li>
+                                <li>RM <span>02</span></li>
+                            </ul>
+                        </div>
+                        <div class="sportsmagazine-fixture-slider-layer">
+                            <time datetime="2008-02-14 20:00">August 28, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child">CIT <span>03</span></li>
+                                <li>KIN <span>03</span></li>
+                            </ul>
+                        </div>
+                        <div class="sportsmagazine-fixture-slider-layer">
+                            <time datetime="2008-02-14 20:00">August 31, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child">ST <span>00</span></li>
+                                <li>FRA <span>01</span></li>
+                            </ul>
+                        </div>
+                        <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                            <time datetime="2008-02-14 20:00">September 03, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                <li>Full Booked</li>
+                            </ul>
+                        </div>
+                        <div class="sportsmagazine-fixture-slider-layer">
+                            <time datetime="2008-02-14 20:00">September 05, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child">ARS <span>03</span></li>
+                                <li>CHL <span>02</span></li>
+                            </ul>
+                        </div>
+                        <div class="sportsmagazine-fixture-slider-layer sportsmagazine-fixture-booked">
+                            <time datetime="2008-02-14 20:00">December 31, 2016</time>
+                            <ul class="sportsmagazine-bgcolor">
+                                <li class="first-child"><small>SPA</small> VS <span>RM</span></li>
+                                <li>Full Booked</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                        </div>
+                <!-- // Content \\-->
+                <!-- <div class="col-md-8"> -->
+
+                    <!--// Fancy Title \\-->
+                    <!-- <div class="sportsmagazine-fancy-title">
+                        <h2>Recent Stories</h2>
+                    </div> -->
+                    <!--// Fancy Title \\-->
+                    <!--// Featured Slider \\-->
+
+                   
+                    <!-- <div class="sportsmagazine-featured-slider">
+                        @if(!empty($recent_stories_data->article_type_id))
+                        @foreach($articles_latest_data as $data)
+                        @if($recent_stories_data->article_type_id==$data->article_type_id)
+                        <div class="sportsmagazine-featured-slider-layer">
+                            <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
+                            <span class="sportsmagazine-black-transparent"></span>
+                            <div class="sportsmagazine-featured-caption">
+                                <h2><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
+                                <span class="sportsmagazine-color">{{date('d F Y | H:i:s', strtotime($data->created));}} / {{$data->published_by}}</span>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                       @endif
+
+                    </div> -->
+                    <!--// Featured Slider \\-->
+                <!-- </div> -->
+                <!--// Content \\-->
+
+                <!--// SideBaar \\-->
+             
+                <!--// SideBaar \\ -->
+
+                <!--// Content \\-->
+                <div class="col-md-8">
                     <div class="widget widget_trending_news">
                         <div class="sportsmagazine-classic-heading">
                             <h2>Coming Up</h2>
@@ -534,72 +519,12 @@
                     </div>
 
                 </div>
+                <!--// Content \\-->
 
+                <!--// SideBaar \\-->
+                <aside class="col-md-4">
 
-
-
-                <aside class="col-md-3">
-
-                        <!--// Widget TeamRanking \\-->
-                        <div class="widget widget_team_ranking">
-                            <div class="sportsmagazine-fancy-title">
-                                <h2>Advertisement Corner</h2>
-                            </div>
-                            <div class=" widget_add">
-                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
-                            </div>
-                        </div>
-                        <!--// Widget TeamRanking \\-->
-                        <div class="widget widget_popular_news">
-                                <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
-                                <ul>
-                                    <li>
-                                        <span>01</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">Basketball Stadium will a max capacity for 5000 fans</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li class="widget-injuries">
-                                        <span>02</span>
-                                        <div class="popular_news_text">
-                                            <small>Injuries</small>
-                                            <a href="blog-detail.html">The Clovers defense must reinvent itself without</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li class="widget-theleague">
-                                        <span>03</span>
-                                        <div class="popular_news_text">
-                                            <small>The League</small>
-                                            <a href="blog-detail.html">Take look to the brand new helmets for next season</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span>04</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">The Basketball women division started training</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span>05</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--// Widget Popular News \\-->
-
-                
-                
-                         <!--// Widget TeamRanking \\-->
+                    <!--// Widget TeamRanking \\-->
                     <div class="widget widget_team_ranking">
                         <div class="sportsmagazine-fancy-title">
                             <h2>Score Boards</h2>
@@ -702,18 +627,11 @@
                         </div>
                     </div>
                     <!--// Widget TeamRanking \\-->
-                 </aside>    
-                           
 
-            
-                        
-                           
-            
-            
-            
-            
-            </div>
-            <div class="col-md-12">
+                </aside>
+                <!--// SideBaar \\-->
+
+                <div class="col-md-12">
                     @foreach($article_type as $type_data)
                     @if($type_data->article_type_name!='Recent News')
                     <div class="sportsmagazine-fancy-title">
@@ -826,8 +744,10 @@
                        
                     </div>
                 </div>
+            </div>
         </div>
-   
+    </div>
+    <!--// Main Section \\-->
 
 
 </div>
@@ -835,3 +755,21 @@
 
 <!--// Main Content \\-->
 @include('footer')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -425,7 +425,10 @@ address {
 .sportsmagazine-header-one {
     float: left;
     width: 100%;
-    background: url(assets/images/vpattren.png);
+    background: url(assets/images/search-modal-bg.jpg);
+  
+    background-size: cover;
+    
 }
 
 
@@ -486,6 +489,8 @@ address {
     float: left;
     width: 100%;
     height: 60px;
+    padding-top: 20px;
+    padding-bottom: 75px;
 }
 
 
@@ -1597,7 +1602,7 @@ li.row.mega_innr {
 }
 
 .sportsmagazine-featured-slider {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .sportsmagazine-black-transparent {
@@ -2223,7 +2228,7 @@ ul li:last-child .sportsmagazine-blog-list-wrap {
 .sportsmagazine-main-content .widget {
     float: left;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -9201,7 +9206,7 @@ a:hover {
 .sportsmagazine-match-fixture {
     float: left;
     width: 100%;
-    margin: 0px 0px 86px;
+    margin: 0px 0px 6px;
 }
 
 .sportsmagazine-classic-heading {
@@ -10449,7 +10454,7 @@ a:hover {
 /* Footer One */
 
 .sportsmagazine-footer-one {
-    background: url(assets/images/footer-pattren.png);
+    background: url(assets/images/search-modal-bg.jpg);
 }
 
 
@@ -11449,4 +11454,23 @@ ul.sportsmagazine-megalist li:hover {
 ul.sportsmagazine-megalist li a:hover {
     background: #ffdc11;
     color: #fff;
+}
+.inline{
+    display:inline-block !important;
+    margin:0px;
+}
+.schedule-btn{
+    color:#000;
+    float: right;
+    border-radius: 3px;
+    font-size: 11px;
+    background-color: #ffdc11;
+    padding: 5px 15px;
+    font-weight: 600;
+
+
+}
+.schedule-btn:hover{
+    color:#fff;
+
 }
