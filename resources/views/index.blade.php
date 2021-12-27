@@ -336,13 +336,15 @@
                             <h2>Coming Up</h2>
                         </div>
                         <ul class="nav-tabs" role="tablist">
-                            <li role="presentation" class="schedules_tab active"><a href="#cricket" aria-controls="home" role="tab" data-toggle="tab">Cricket</a></li>
-                            <li role="presentation" class="schedules_tab"><a href="#football" aria-controls="profile" role="tab" data-toggle="tab">Football</a></li>
-                            <li role="presentation" class="schedules_tab"><a href="#tennis" aria-controls="messages" role="tab" data-toggle="tab">Tennis</a></li>
+                            @foreach($sports_data as $data)
+                            <li role="presentation" class="schedules_tab "><a href="#{{$data->sport_name}}" aria-controls="home" role="tab" data-toggle="tab">{{$data->sport_name}}</a></li>
+                            @endforeach
+                            {{-- <li role="presentation" class="schedules_tab"><a href="#football" aria-controls="profile" role="tab" data-toggle="tab">Football</a></li>
+                            <li role="presentation" class="schedules_tab"><a href="#tennis" aria-controls="messages" role="tab" data-toggle="tab">Tennis</a></li> --}}
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content on_ho">
-                            <div role="tabpanel" class="tab-pane active" id="cricket">
+                            <div role="tabpanel" class="tab-pane active" id="Cricket">
                                 <!--// Main Section \\-->
                                 <div class="sportsmagazine-match-fixture">
                                     <table class="sportsmagazine-client-detail">
@@ -500,7 +502,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="tennis">
+                            <div role="tabpanel" class="tab-pane" id="Tennis">
                                 <div class="widget_popular_news">
                                     <ul>
                                         <li class="widget-theleague">

@@ -19,4 +19,4 @@ Route::get('/',[ArticlesController::class,'index']);
 Route::get('schedule',[ArticlesController::class,'create'])->name('schedule');
 // Route::get('index-old',[ArticlesController::class,''])->name('old-index');
 Route::get('details/{id}',[ArticlesController::class,'show'])->name('details');
-
+Route::get('admin',[ArticlesController::class,'show'])->name('detaillsrr');
