@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-9">
+                <div class="col-md-6">
                     <!--// Widget Trending News \\-->
                     <div class="widget widget_trending_news">
                         <div class="sportsmagazine-fancy-title">
