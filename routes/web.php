@@ -18,4 +18,4 @@ use App\Http\Controllers\ArticlesController;
 Route::get('/',[ArticlesController::class,'index']);
 Route::get('schedule',[ArticlesController::class,'create'])->name('schedule');
 Route::get('details/{id}',[ArticlesController::class,'show'])->name('details');
-
+Route::get('admin',[ArticlesController::class,'show'])->name('detaillsrr');
