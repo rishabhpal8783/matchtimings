@@ -11475,3 +11475,12 @@ ul.sportsmagazine-megalist li a:hover {
     color:#fff;
 
 }
+.b2{
+    border: none;
+    padding: 3px 9px;
+    background-color: #ffdc11;
+    color: #000;
+    box-shadow: 2px 2px #474646;
+    border-radius: 5px;
+}
+}

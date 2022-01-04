@@ -649,7 +649,7 @@
                             <ul class="ranking-content-row">
                                 <li>3</li>
                                 <li> <img src="{{url('assets/extra-images/ranking-widget-flag-3.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Red Wings</span> <small>Marine College</small> </div>
+                                    <div classsportsmagazine-fancy-title="ranking-logo"><span>Red Wings</span> <small>Marine College</small> </div>
                                 </li>
                                 <li>07</li>
                                 <li>07</li>
@@ -728,8 +728,8 @@
                     @foreach($article_type as $type_data)
                     @if($type_data->article_type_name!='Recent News')
                     <div class="sportsmagazine-fancy-title">
-                        <h2>{{$type_data->article_type_name}}</h2>
-                        <h2><a href="{{url('all/' .str_replace(' ', '-', $type_data->article_type_name))}}">All</a></h2>
+                        <h2 class="inline">{{$type_data->article_type_name}}</h2>
+                        <a href="{{url('all/' .str_replace(' ', '-', $type_data->article_type_name))}}" class="schedule-btn inline">See All</a>
                     </div>
                   
                     <div class="multiple-items">
