@@ -16,7 +16,8 @@ use App\Http\Controllers\ArticlesController;
 
 
 Route::get('/',[ArticlesController::class,'index']);
-Route::get('schedule',[ArticlesController::class,'create'])->name('schedule');
+Route::get('schedule/{type}/{name}/{id}/Latest-Schedule-match-list-venue-dates-team-list',[ArticlesController::class,'create'])->name('schedule');
 // Route::get('index-old',[ArticlesController::class,''])->name('old-index');
 Route::get('details/{id}',[ArticlesController::class,'show'])->name('details');
+Route::get('all/{name}',[ArticlesController::class,'all'])->name('all');
 Route::get('admin',[ArticlesController::class,'show'])->name('detaillsrr');

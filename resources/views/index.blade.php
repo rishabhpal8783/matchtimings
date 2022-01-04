@@ -4,6 +4,7 @@
 <!--// Main Banner \\-->
  
 <!--// Main Content \\-->
+
 <div class="sportsmagazine-main-content">
         <div class="container" >
             <div class="row">
@@ -220,9 +221,15 @@
 
                             <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title">
-                                    <h2 class="inline">Schedules</h2>
-                                    <a href="{{url('schedule')}}" class="schedule-btn inline">Full Schedules</a>
+                                      {{-- <h2 class="inline">{{$userdata}}</h2>   --}}
+@foreach ($userdata1 as $userdata)
+
+<h2 class="inline">{{$userdata->season_name}}</h2>
+
+                                
+                                <a href="{{url('/schedule/'.str_replace(' ', '-', $userdata->sport_name).'/'.str_replace(' ', '-',$userdata->event_name).'/'.str_replace(' ', '-',$userdata->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}"  class="schedule-btn inline">Full Schedules</a>
                                 </div>
+                                @endforeach
                         <!-- Nav tabs -->
 
                                 {{-- <ul class="nav-tabs" role="tablist">
@@ -240,6 +247,7 @@
                                         <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
                                             <ul class="row">
                                                 @foreach( $schedule_data as $data)
+                                           
                                                 <li class="col-md-12">
                                                     <div class="sportsmagazine-fixture-wrap">
                                                         <div class="sportsmagazine-teams-match">
@@ -721,7 +729,9 @@
                     @if($type_data->article_type_name!='Recent News')
                     <div class="sportsmagazine-fancy-title">
                         <h2>{{$type_data->article_type_name}}</h2>
+                        <h2><a href="{{url('all/' .str_replace(' ', '-', $type_data->article_type_name))}}">All</a></h2>
                     </div>
+                  
                     <div class="multiple-items">
                         <div class="sportsmagazine-blog sportsmagazine-blog-grid">
                             <ul class="row">
