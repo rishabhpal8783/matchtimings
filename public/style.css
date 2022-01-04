@@ -2227,6 +2227,7 @@ ul li:last-child .sportsmagazine-blog-list-wrap {
 
 .sportsmagazine-main-content .widget {
     float: left;
+    box-shadow: 0 0.125rem 0.25rem 0 rgb(58 59 69 / 55%) !important;
     width: 100%;
     margin-bottom: 20px;
 }

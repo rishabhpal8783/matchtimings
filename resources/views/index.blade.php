@@ -87,7 +87,7 @@
                                     <h6>Game Countdown</h6>
                                     <div id="sportsmagazine-countdown" class="is-countdown"><span class="countdown-row countdown-show3"><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Minutes</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Seconds</span></span></span></div>
                                 </div>
-                                <a href="fixture.html" class="widget_match_btn">Buy Ticket Now</a>
+                               
                             </div>    
 
                         <div class="widget widget_trending_news">
@@ -729,7 +729,7 @@
                               @foreach($articles_data as $data)
                               @if($type_data->article_type_id==$data->article_type_id)
 
-                                <li class="col-md-4 sportsmagazine-the-team">
+                                <li class="col-md-3 sportsmagazine-the-team">
                                     <figure>
                                         <a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
                                         <figcaption>
