@@ -40,7 +40,7 @@
         <header id="sportsmagazine-header" class="sportsmagazine-header-one">
 
             <!--// TopStrip \\-->
-            <div class="sportsmagazine-topstrip">
+            {{-- <div class="sportsmagazine-topstrip">
                 <div class="container">
                     <div class="row">
                         <aside class="col-md-12">
@@ -62,15 +62,15 @@
                         </aside>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!--// TopStrip \\-->
 
             <!--// MainSection \\-->
             <div class="sportsmagazine-main-header">
                 <div class="container">
-                    <div class="row">
+                    <div class="row"> 
                         <aside class="col-md-2">
-                            <a href="index.html" class="sportsmagazine-logo"><img src="assets/images/mt_logo.png" alt=""></a>
+                            <a href="#" class="sportsmagazine-logo"><img src={{url('assets/images/mt_logo.png')}} alt=""></a>
                         </aside>
                         <div class="col-md-10">
                             <div class="sportsmagazine-right-section">
@@ -94,10 +94,10 @@
                                                     <li class="row mega_innr">
                                                         @foreach($data->league as $leag)
                                                         <div class="col-md-4">
-                                                            <h4>{{$leag->league_name}}</h4>
+                                                            <h4><a href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h4>
                                                             <ul class="sportsmagazine-megalist">
                                                                 @foreach($leag->event as $events)
-                                                                <li><a href="#">{{$events->event_name}}</a></li>
+                                                                <li><a href="{{url('/event/'.$events->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name))}}">{{$events->event_name}}</a></li>
                                                                 @endforeach
                                                             </ul>
                                                         </div> @endforeach

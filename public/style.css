@@ -426,9 +426,7 @@ address {
     float: left;
     width: 100%;
     background: url(assets/images/search-modal-bg.jpg);
-  
     background-size: cover;
-    
 }
 
 
@@ -510,13 +508,11 @@ address {
     height: 71px;
     width: 3px;
     background-color: #333;
-    -webkit-transform: rotate(
-34deg);
+    -webkit-transform: rotate( 34deg);
     -moz-transform: rotate(34deg);
     -ms-transform: rotate(34deg);
     -o-transform: rotate(34deg);
-    transform: rotate(
-34deg);
+    transform: rotate( 34deg);
 }
 
 
@@ -1616,7 +1612,6 @@ li.row.mega_innr {
 }
 
 .sportsmagazine-featured-caption {
-    position: absolute;
     left: 0px;
     bottom: 0px;
     width: 60%;
@@ -6092,24 +6087,28 @@ blockquote span:before {
     margin: 0px 0px 4px;
     font-size: 15px;
 }
+
 span.view_all {
     margin-top: 10px;
 }
+
 span.view_all a {
     text-align: center;
     color: #000;
     font-size: 11px;
     font-weight: 600;
 }
+
 span.view_all:hover {
     color: #ffdc11;
-    
 }
+
 span.view_all a:hover {
-   color: #ffdc11;
+    color: #ffdc11;
 }
+
 a:hover {
-   color: #ffdc11;
+    color: #ffdc11;
 }
 
 .sportsmagazine-buy-ticket-text time {
@@ -7369,11 +7368,13 @@ a:hover {
     width: 42%;
     height: 120px;
 }
+
 .sportsmagazine-first-team img {
     width: 52px;
     height: 52px;
     border-radius: 100%;
 }
+
 .sportsmagazine-second-team img {
     width: 52px;
     height: 52px;
@@ -7398,9 +7399,11 @@ a:hover {
     width: 30%;
     padding: 34px 10px 0;
 }
+
 .sportsmagazine-second-team-info h6 {
     font-size: 13px;
 }
+
 .sportsmagazine-first-team-info h6 {
     font-size: 13px;
 }
@@ -11456,26 +11459,27 @@ ul.sportsmagazine-megalist li a:hover {
     background: #ffdc11;
     color: #fff;
 }
-.inline{
-    display:inline-block !important;
-    margin:0px;
+
+.inline {
+    display: inline-block !important;
+    margin: 0px;
 }
-.schedule-btn{
-    color:#000;
+
+.schedule-btn {
+    color: #000;
     float: right;
     border-radius: 3px;
     font-size: 11px;
     background-color: #ffdc11;
     padding: 5px 15px;
     font-weight: 600;
-
-
 }
-.schedule-btn:hover{
-    color:#fff;
 
+.schedule-btn:hover {
+    color: #fff;
 }
-.b2{
+
+.b2 {
     border: none;
     padding: 3px 9px;
     background-color: #ffdc11;
@@ -11483,4 +11487,6 @@ ul.sportsmagazine-megalist li a:hover {
     box-shadow: 2px 2px #474646;
     border-radius: 5px;
 }
+
+
 }

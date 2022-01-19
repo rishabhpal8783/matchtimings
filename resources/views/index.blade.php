@@ -15,40 +15,20 @@
                         <!--// Widget series \\-->
                         <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Recent Series</h2></div>
+
                                 <ul>
-                                    
+                                    @foreach ($sports_data1 as $item)
+
                                     <li>
-                                        <span style="padding-top:0px">01</span>
+                                        <span style="padding-top:0px">{{$item->season_id}}</span>
                                         <div class="popular_news_text">
                                            
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
+                                            <a href="{{url('/schedule/'.$item->season_id.'/'.str_replace(' ', '-', $item->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$item->season_name}}</a>
+                                            <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time>
                                         </div>
                                     </li>
-                                    <li>
-                                        <span style="padding-top:0px">02</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">South Africa VS India</a>
-                                            <time datetime="2008-02-14 20:00">Dec 26, 2021 - Jan 08, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">03</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">04</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
+                                    @endforeach
+                                   
                                  
 
                                 </ul>
@@ -92,99 +72,43 @@
                             </div>    
 
                         <div class="widget widget_trending_news">
-                                <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
+                            @foreach($article_type as $type_data)
+                                                @if($type_data->article_type_name =='Featured News')
+                                <div class="sportsmagazine-fancy-title"> <h4 style="    color: aliceblue;">{{$type_data->article_type_name}}</h4></div>
                                 <!-- Nav tabs -->
-                                <ul class="nav-tabs" role="tablist">
+                                {{-- <ul class="nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
                                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
                                     <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
-                                </ul>
+                                </ul> --}}
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
                                         <div class="widget_popular_news">
                                             <ul>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
+                                                @foreach($articles_data as $data)
+                                                @if($type_data->article_type_id==$data->article_type_id)
+                                                     <!-- Post Item --> 
+                                             
                                                 <li class="widget-theleague">
                                                     <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
+                                                   
+                                                        <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                                            <p class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </p>
+
+                                                            {{-- <span class="sportsmagazine-color">{{$data->published_by}} </span>                                                       --}}
                                                     </div>
                                                 </li>
-                                                
+                                                @endif
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane" id="profile">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                   
+                                
                                 </div>
+                                @endif
+                                @endforeach
                             </div>
 
                                   
@@ -194,51 +118,52 @@
 
 
 
-
                  <div class="col-md-6">
-                            
-                            <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
+                
+                    @foreach($article_type as $type_data)
+                    @if($type_data->article_type_name =='Featured News')
+                 
+                            <div class="sportsmagazine-fancy-title"><h2>{{$type_data->article_type_name}}</h2></div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
                             <div class="sportsmagazine-featured-slider">
+                               
+                                   
+                                @foreach($articles_data as $data)
+                                @if($type_data->article_type_id==$data->article_type_id)
                                 <div class="sportsmagazine-featured-slider-layer">
-                                    <img src="http://127.0.0.1:8000/assets/extra-images/featured-slider-1.jpg" alt="">
+                                    <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
                                     <span class="sportsmagazine-black-transparent"></span>
                                     <div class="sportsmagazine-featured-caption">
-                                        <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non nunc</h2>
-                                        <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
+                                        <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                        <span class="sportsmagazine-color">{{$data->published_by}} </span>
                                     </div>
                                 </div>
-                                <div class="sportsmagazine-featured-slider-layer">
+                                @endif
+                                @endforeach
+
+                                {{-- <div class="sportsmagazine-featured-slider-layer">
                                     <img src="https://admin.matchtimings.com/assets/article/a26d14d435610243c045e5fdaa801bd5.jpg" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
                                     <div class="sportsmagazine-featured-caption">
                                         <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non nunc</h2>
                                         <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
+                            @endif
+                            @endforeach
+                           
                             <!--// Featured Slider \\-->
 
                             <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title">
                                       {{-- <h2 class="inline">{{$userdata}}</h2>   --}}
-@foreach ($userdata1 as $userdata)
-
-<h2 class="inline">{{$userdata->season_name}}</h2>
-
-                                
+                                    @foreach ($userdata1 as $userdata)
+                                  <h2 class="inline">{{$userdata->season_name}}</h2>
                                 <a href="{{url('/schedule/'.str_replace(' ', '-', $userdata->sport_name).'/'.str_replace(' ', '-',$userdata->event_name).'/'.str_replace(' ', '-',$userdata->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}"  class="schedule-btn inline">Full Schedules</a>
                                 </div>
                                 @endforeach
-                        <!-- Nav tabs -->
-
-                                {{-- <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="schedules_tab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">IPL 2021</a></li>
-                                    <li role="presentation" class="schedules_tab"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">T20 World Cup</a></li>
-                                    <li role="presentation" class="schedules_tab"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Football</a></li>
-                                </ul> --}}
-                                <div class="main_shdl">
-                                   
+                                <div class="main_shdl">     
                                 </div>
                                 <!-- Tab panes -->
                                 <div class="tab-content on_ho">
@@ -254,9 +179,10 @@
                                                             <div class="sportsmagazine-first-team">
                                                                 <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
                                                                 <div class="sportsmagazine-first-team-info">
-                                                                    <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teama->team_name}}</a></h6>
+                                                                    <h6 style="font-size: 16px;"><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teama->team_name))}}">{{$data->teama->team_name}}</a></h6>
                                                                     {{-- <span>Bepop Institute</span> --}}
-                                                                    <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                                 
+                                                                    <span class="view_all"><a href="{{url('/match/'.$data->teama->team_id.'/'.str_replace(' ', '-', $data->teama->team_name))}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                                 </div>
                                                             </div>
                                                             <div class="sportsmagazine-match-view">
@@ -265,16 +191,16 @@
                                                             <div class="sportsmagazine-second-team">
                                                                 <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
                                                                 <div class="sportsmagazine-second-team-info">
-                                                                    <h6 style="font-size: 16px;"><a href="fixture-detail.html">{{$data->teamb->team_name}}</a></h6>
+                                                                    <h6 style="font-size: 16px;"><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teamb->team_name))}}">{{$data->teamb->team_name}}</a></h6>
                                                                     {{-- <span>Marine College</span> --}}
-                                                                    <span class="view_all"><a href="#">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                                    <span class="view_all"><a href="{{url('/match/'.$data->teamb->team_id.'/'.str_replace(' ', '-', $data->teamb->team_name))}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="sportsmagazine-buy-ticket">
                                                             <div class="sportsmagazine-buy-ticket-text">
-                                                                <time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
-                                                                <h5><a href="#">{{$data->countries->name}}</a></h5>
+                                                                <time datetime="{{$data->created}}" class="dt"><a href="{{url('/match/'.str_replace(' ', '-', $data->created))}}">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
+                                                                <h5><a href="{{url('/match/'.str_replace(' ', '-', $data->countries->name))}}">{{$data->countries->name}}</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -282,6 +208,9 @@
                                             @endforeach
 
                                             </ul>
+                                            @foreach ($userdata1 as $userdata)      
+                                <a href="{{url('/schedule/'.str_replace(' ', '-', $userdata->sport_name).'/'.str_replace(' ', '-',$userdata->event_name).'/'.str_replace(' ', '-',$userdata->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}"  class="schedule-btn inline">Full Schedules</a> 
+                                @endforeach
                                         </div>
                                         <!--// Main Section \\-->
                                     </div>
@@ -344,203 +273,65 @@
                             <h2>Coming Up</h2>
                         </div>
                         <ul class="nav-tabs" role="tablist">
-                            @foreach($sports_data as $data)
-                            <li role="presentation" class="schedules_tab "><a href="#{{$data->sport_name}}" aria-controls="home" role="tab" data-toggle="tab">{{$data->sport_name}}</a></li>
+                            @foreach($sports_data1 as $data)
+                            <li role="presentation" class="{{ $data->season_id == 1 ? 'active' : '' }}">
+                                <a href="#home{{ $data->season_id }}" aria-controls="home" role="tab" data-toggle="tab">{{$data->season_name }}</a>
+                              </li>
+                            {{-- <li role="presentation" class="schedules_tab "><a href="#{{$data->season_name}}" aria-controls="home" role="tab" data-toggle="tab">{{$data->season_name}}</a></li> --}}
                             @endforeach
-                            {{-- <li role="presentation" class="schedules_tab"><a href="#football" aria-controls="profile" role="tab" data-toggle="tab">Football</a></li>
-                            <li role="presentation" class="schedules_tab"><a href="#tennis" aria-controls="messages" role="tab" data-toggle="tab">Tennis</a></li> --}}
+                           
                         </ul>
                         <!-- Tab panes -->
-                        <div class="tab-content on_ho">
-                            <div role="tabpanel" class="tab-pane active" id="Cricket">
-                                <!--// Main Section \\-->
-                                <div class="sportsmagazine-match-fixture">
+
+                        <div class="tab-content">
+                            @foreach ($sports_data1 as $itam)
+                                 <div role="tabpanel" class="tab-pane {{ $itam->season_id == 1 ? 'active' : '' }}" id="home{{ $itam->season_id }}" class="active">
+
                                     <table class="sportsmagazine-client-detail">
                                         <tbody>
+                                    @foreach( $schedule_data1 as $data)
+                                  
+                                    @if ($data->season_id==$itam->season_id)    
+                                   <?php $i =  0 ;
+                                    if($i <10){ ?>
+
+
+
+
                                             <tr>
-                                                <td>December 09, 2017</td>
+                                                <td><time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time></td>
                                                 <td>
-                                                    <figure><img src="assets/extra-images/player-stats-img1.jpg" alt=""></figure>
+                                                    <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
                                                     <div class="player-stats-text">
-                                                        <h6>Ocean Kings</h6>
-                                                        <span>St. Patrick’s Institute</span>
+                                                        <h6><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teama->team_name))}}">{{$data->teama->team_name}}</a></h6>
                                                     </div>
                                                 </td>
                                                 <td><span>VS</span></td>
                                                 <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img2.jpg')}}" alt=""></figure>
+                                                    <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
                                                     <div class="player-stats-text">
-                                                        <h6>Bloody Wave</h6>
-                                                        <span>Marine College</span>
+                                                        <h6><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teamb->team_name))}}">{{$data->teamb->team_name}}</a></h6>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>December 11, 2017</td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img3.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>L.A Pirates</h6>
-                                                        <span>Bebop Institute</span>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="assets/extra-images/player-stats-img4.jpg" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Ocean Kings</h6>
-                                                        <span>Icarus College</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>December 12, 2017</td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img5.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Red Wings</h6>
-                                                        <span>Marine College</span>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img6.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Lucky Clovers</h6>
-                                                        <span>Elric Bros School</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>December 15, 2017</td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/fixture-classic-img6.png')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Draconians</h6>
-                                                        <span>Atlantic School</span>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img1.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Ocean Kings</h6>
-                                                        <span>St. Patrick’s Institute</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>December 17, 2017</td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img2.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Bloody Wave</h6>
-                                                        <span>Marine College</span>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img3.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>L.A Pirates</h6>
-                                                        <span>Bebop Institute</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>December 17, 2017</td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img4.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Ocean Kings</h6>
-                                                        <span>Icarus College</span>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img5.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Red Wings</h6>
-                                                        <span>Marine College</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>December 22, 2017</td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img1.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Ocean Kings</h6>
-                                                        <span>St. Patrick’s Institute</span>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="{{url('assets/extra-images/player-stats-img2.jpg')}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6>Bloody Wave</h6>
-                                                        <span>Marine College</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!--// Main Section \\-->
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="football">
-                                <div class="widget_popular_news">
-                                    <ul>
-                                        <li class="widget-injuries">
-                                            <div class="popular_news_text">
-                                                <small>Injuries</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="popular_news_text">
-                                                <small>The Team</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="Tennis">
-                                <div class="widget_popular_news">
-                                    <ul>
-                                        <li class="widget-theleague">
-                                            <div class="popular_news_text">
-                                                <small>The League</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="popular_news_text">
-                                                <small>The Team</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                        <li class="widget-injuries">
-                                            <div class="popular_news_text">
-                                                <small>Injuries</small>
-                                                <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                          <?php  $i++;
+                                        }
+?>
+                                   
+                                            
+                                    @endif
+                                  
+                                @endforeach
+
+                            </tbody>
+                        </table>
+                                   <a href="{{url('/schedule/'.$itam->season_id.'/'.str_replace(' ', '-', $itam->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}"  class="schedule-btn inline">Full Schedules</a> 
+
+                                
+                                 </div>
+                            @endforeach
+                           </div>
+
 
                     </div>
 
@@ -562,49 +353,30 @@
                         </div>
                         <!--// Widget TeamRanking \\-->
                         <div class="widget widget_popular_news">
+
+                            @foreach($article_type as $type_data)
+                    @if($type_data->article_type_name =='Featured News')
                                 <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
                                 <ul>
+                                    @foreach($articles_data as $data)
+                                    @if($type_data->article_type_id==$data->article_type_id)
                                     <li>
-                                        <span>01</span>
+                                     
                                         <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">Basketball Stadium will a max capacity for 5000 fans</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
+                                          
+                                            <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                                            <p class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </p>
+
                                         </div>
                                     </li>
-                                    <li class="widget-injuries">
-                                        <span>02</span>
-                                        <div class="popular_news_text">
-                                            <small>Injuries</small>
-                                            <a href="blog-detail.html">The Clovers defense must reinvent itself without</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li class="widget-theleague">
-                                        <span>03</span>
-                                        <div class="popular_news_text">
-                                            <small>The League</small>
-                                            <a href="blog-detail.html">Take look to the brand new helmets for next season</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span>04</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">The Basketball women division started training</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span>05</span>
-                                        <div class="popular_news_text">
-                                            <small>The Team</small>
-                                            <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                            <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                        </div>
-                                    </li>
+                                    @endif
+                                    @endforeach
+    
+                                  
                                 </ul>
+                                @endif
+                                @endforeach
+
                             </div>
                             <!--// Widget Popular News \\-->
 
@@ -738,7 +510,7 @@
                         
                               @foreach($articles_data as $data)
                               @if($type_data->article_type_id==$data->article_type_id)
-
+                            
                                 <li class="col-md-3 sportsmagazine-the-team">
                                     <figure>
                                         <a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>

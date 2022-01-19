@@ -22,23 +22,38 @@
                                 <div class="sportsmagazine-fancy-title"><h2>Recent Series</h2></div>
                                 <ul>
                                     
-                   
-                                    <ul>
-                                        @foreach ($sports_data1 as $item)
-    
-                                        <li>
-                                            <span style="padding-top:0px">{{$item->season_id}}</span>
-                                            <div class="popular_news_text">
-                                               
-                                                <a href="#">{{$item->season_name}}</a>
-                                                <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time>
-                                            </div>
-                                        </li>
-                                        @endforeach
-                                       
-                                     
-    
-                                    </ul>
+                                    <li>
+                                        <span style="padding-top:0px">01</span>
+                                        <div class="popular_news_text">
+                                           
+                                            <a href="#">Big BAsh League</a>
+                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span style="padding-top:0px">02</span>
+                                        <div class="popular_news_text">
+                                           
+                                            <a href="#">South Africa VS India</a>
+                                            <time datetime="2008-02-14 20:00">Dec 26, 2021 - Jan 08, 2022</time>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span style="padding-top:0px">03</span>
+                                        <div class="popular_news_text">
+                                           
+                                            <a href="#">Big BAsh League</a>
+                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span style="padding-top:0px">04</span>
+                                        <div class="popular_news_text">
+                                           
+                                            <a href="#">Big BAsh League</a>
+                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
+                                        </div>
+                                    </li>
                                  
 
                                 </ul>
@@ -194,6 +209,10 @@
                                 <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
                                     <ul class="row">
                                         @foreach( $schedule_data as $data)
+                                     
+                                            
+                                      
+                                      
                                         <li class="col-md-12">
                                             <div class="sportsmagazine-fixture-wrap">
                                                 <div class="sportsmagazine-teams-match">
@@ -225,6 +244,7 @@
                                                 </div>
                                             </div>
                                         </li>
+                                      
                                        @endforeach
 
                                     </ul>
