@@ -9,6 +9,7 @@ use App\Models\Articles;
 use App\Models\Articletype;
 use App\Models\Tagtypes;
 use App\Models\Events;
+use App\Models\League;   
 use App\Models\Sports;
 use App\Models\Seasons;
 use App\Models\Schedules;
@@ -79,28 +80,40 @@ class ScheduleController extends Controller
      */
     public function show($id,$type,$name)
     {
+      
+       
         $name=(str_replace('-', ' ', $name));
+        $League=League::where('league_name',$name)->first();
         $articles_data=Articles::all();
         $sports_data1=Sports::where('sport_name',$type)->get();
         $sports_data=Sports::all(); 
+        $sports=Seasons::all();
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('fixture-detail',compact('sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
+        return view('fixture-detail',compact('League','sports','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
 
-    public function event($id,$uname,$type,$name)
+    public function sport($id,$name)
     {
-
+       $name=(str_replace('-', ' ', $name));
+        $sports_data=Sports::all();
+        $sports_data1=Sports::where('sport_id',$id)->first();
+        $sports=Seasons::all();
        
+        return view('player-detail',compact('sports','name','sports_data','sports_data1'));
+    }
+    public function event($id,$uname,$type,$name)
+    {  
+        $sports=Seasons::all();
         $uname=(str_replace('-', ' ', $uname));
         $name=(str_replace('-', ' ', $name));
-        //$sports_data1=Events::where('event_id',$id)->get();
+        $Events=Events::where('event_name',$name)->first();
         $articles_data=Articles::all();
         $sports_data1=Sports::where('sport_name',$uname)->get();
         $sports_data=Sports::all();
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('fixture-detail1',compact('uname','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
+        return view('fixture-detail1',compact('Events','sports','uname','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
     public function  all($name)
     {

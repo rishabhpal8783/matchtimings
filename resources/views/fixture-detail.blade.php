@@ -32,9 +32,9 @@
 
                                   
                            <ul class="sportsmagazine-breadcrumb" style="margin-top:20px;">
-                            <li><a href="#">Home </a></li>
-                           <li><a href="index-2.html"> {{$type}}</a></li>
-						   <li><a href="#">{{$name}} </a></li>
+                            <li><a >Home </a></li>
+                           <li><a > {{$type}}</a></li>
+						   <li><a >{{$name}} </a></li>
 						   
 
                         </ul>
@@ -65,6 +65,8 @@
                                
                                 <li class="">
                                     @foreach($data->league as $leag)
+                                
+                                    @if($leag->league_name==$name)
                                     <div class="">
 
 
@@ -75,7 +77,8 @@
                                             @endforeach
                                         </ul>
                                      
-                                    </div> @endforeach
+                                    </div>@endif
+                                    @endforeach
                                    
                                 </li>
                              
@@ -104,40 +107,20 @@
                         <!--// Widget series \\-->
                         <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Recent Series</h2></div>
+                                
                                 <ul>
-                                    
+                                    @foreach ($sports as $item)
+
                                     <li>
-                                        <span style="padding-top:0px">01</span>
+                                        <span style="padding-top:0px">{{$item->season_id}}</span>
                                         <div class="popular_news_text">
                                            
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
+                                            <a href="{{url('/schedule/'.$item->season_id.'/'.str_replace(' ', '-', $item->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$item->season_name}}</a>
+                                            <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time>
                                         </div>
                                     </li>
-                                    <li>
-                                        <span style="padding-top:0px">02</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">South Africa VS India</a>
-                                            <time datetime="2008-02-14 20:00">Dec 26, 2021 - Jan 08, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">03</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">04</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
+                                    @endforeach
+                                   
                                  
 
                                 </ul>
@@ -288,32 +271,18 @@
                         </div>
                         <ul class="nav-tabs" role="tablist">
                                     <li role="presentation" ><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Team Details</a></li>
-                                    <li role="presentation" ><a href="#squad" aria-controls="squad" role="tab" data-toggle="tab">Squad</a></li>
-                                    <li role="presentation" class="active"><a href="#match" aria-controls="match" role="tab" data-toggle="tab">Recent Matches</a></li>
-                                </ul>
+                                   </ul>
                    <div class="tab-content" style="padding-top:20px;">
                                     <div role="tabpanel" class="tab-pane " id="details">
                                         <div class="widget_popular_news">
                                              <div class="sportsmagazine-rich-editor">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
-                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum odio. Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consectetur magna, at efficiat est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
-                                <span></span>
-                                </blockquote>
-                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum  ti odio. Suspendisse lacinia risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consesactetur magna, at efficit est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
+                                                <p>{!!$League->description!!}</p>                                
                                 <div class="sportsmagazine-post-tags">
                                   <div class="sportsmagazine-tags">
-                                     <a href="404.html">#Playoffs</a>
-                                     <a href="404.html">#Injuries</a>
-                                     <a href="404.html">#Teams</a>
-                                     <a href="404.html">#Uniform</a>
+                                    
                                   </div>
                                   <div class="sportsmagazine-blog-social">
-                                     <ul>
-                                        <li><a href="https://www.facebook.com/" class="color-one"><i class="fa fa-facebook"></i>facebook</a></li>
-                                        <li><a href="https://twitter.com/login" class="color-two"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                        <li><a href="https://plus.google.com/" class="color-three"><i class="fa fa-google-plus"></i>Google+</a></li>
-                                     </ul>
+                                     
                                   </div>
                                </div>
                             </div>

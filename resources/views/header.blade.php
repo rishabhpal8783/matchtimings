@@ -87,7 +87,7 @@
                                         <ul class="nav navbar-nav">
                                             <li class="active"><a href="{{url('/')}}">Home</a></li>
                                             @foreach($sports_data as $data)
-                                            <li class="sportsmagazine-megamenu-li"><a href="#">{{$data->sport_name}}</a>
+                                            <li class="sportsmagazine-megamenu-li"><a href="{{url('/sport/'.$data->sport_id.'/'.str_replace(' ', '-', $data->sport_name))}}" >{{$data->sport_name}}</a>
 
                                                 <ul class="sportsmagazine-megamenu">
                                                    
