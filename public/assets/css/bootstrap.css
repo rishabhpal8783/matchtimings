@@ -8643,7 +8643,7 @@ button.close {
 }
 
 .sportsmagazine-thumb {
-    margin: 0px 0px 87px;
+    margin: 0px 0px 17px;
 }
 
 .sportsmagazine-thumb:before {
@@ -8674,9 +8674,9 @@ button.close {
 }
 
 .sportsmagazine-fixture-thumb {
-    background-image: url("../extra-images/blog-detail-thumb.jpg");
-    background-position: center;
-    padding: 59px 0px 100px;
+    background-image: url("../extra-images/stadium.jpg");
+    background-position: bottom;
+    padding: 25px 0px 35px;
 }
 
 .sportsmagazine-fixture-thumb .thumb-transparent {
