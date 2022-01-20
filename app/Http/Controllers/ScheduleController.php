@@ -115,6 +115,17 @@ class ScheduleController extends Controller
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
         return view('fixture-detail1',compact('Events','sports','uname','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
+    public function player()
+    {  
+        $sports=Seasons::all();
+       
+        $articles_data=Articles::all();
+       
+        $sports_data=Sports::all();
+        $article_type=Articletype::all();
+        $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
+        return view('player-list',compact('sports_data','articles_data','articles_latest_data','article_type'));
+    }
     public function  all($name)
     {
         $name=(str_replace('-', ' ', $name));

@@ -75,8 +75,8 @@
                                                             @foreach($events->sesions as $event)
                                                             
                                                             <li><a href="{{url('/event/'.$event->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $event->event_name))}}">{{$event->season_name}}</a></li>
-                                                            @endif
-                                                           
+                                                         
+                                                            @endforeach
                                                         </ul>
                                                     
                                                     </li>

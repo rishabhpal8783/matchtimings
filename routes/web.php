@@ -27,4 +27,5 @@ Route::get('schedule/{id}/{name}/Latest-Schedule-match-list-venue-dates-team-lis
 Route::get('sport/{id}/{name}',[ScheduleController::class,'sport'])->name('sport');
 Route::get('league/{id}/{type}/{name}',[ScheduleController::class,'show'])->name('league');
 Route::get('event/{id}/{uname}/{type}/{name}',[ScheduleController::class,'event'])->name('event');
+Route::get('player',[ScheduleController::class,'player'])->name('player');
 
