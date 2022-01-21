@@ -98,8 +98,50 @@
 					<div class="row">
 						
 						
-                <aside class="col-md-3">
+             <aside class="col-md-3">
 
+                <div class="widget widget_popular_news">
+                        <div class="sportsmagazine-fancy-title"><h2> Links</h2></div>
+                                
+                        <ul class="">
+                             
+                             @foreach($sports_data1 as $data)
+                             <li class="" ><h4 style="display: none;"><a href="#">{{$data->sport_name}}</a></h4>
+
+                                 <ul class="">
+                                    
+                                     <li class="">
+                                         @foreach($data->league as $leag)
+                                         <div class="popular_news_text">
+ 
+
+                                             <h4 style="display: none;" ><a href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h4>
+                                             <ul class="">
+                                                 @foreach($leag->event as $events)
+                                                 <li style="overflow:hidden;padding:10px;"><a href="{{url('/event/'.$events->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name))}}">{{$events->event_name}}</a>
+                                                 
+                                                     <ul class="">
+                                                         @foreach($events->sesions as $event)
+                                                         
+                                                         <li><a href="{{url('/schedule/'.$event->season_id.'/'.str_replace(' ', '-', $event->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$event->season_name}}</a></li>
+                                                      
+                                                         @endforeach
+                                                     </ul>
+                                                 
+                                                 </li>
+                                                 @endforeach
+                                             </ul>
+                                          
+                                         </div> @endforeach
+                                        
+                                     </li>
+                                  
+                                 </ul>
+                             </li>
+                             @endforeach
+                           </ul>
+                             </li>
+                         </ul> </div>
                     
                         <!--// Widget series \\-->
                         <div class="widget widget_popular_news">
@@ -159,43 +201,33 @@
                 
                 </aside> 
                      
-					 <div class="col-md-6">
+			<div class="col-md-6">
 					 
 						 <div class="widget widget_trending_news">
-                        <div class="sportsmagazine-classic-heading">
-                            <h2>About The Team </h2>
-                        </div>
-                        <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" ><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Team Details</a></li>
-                                    <li role="presentation" ><a href="#squad" aria-controls="squad" role="tab" data-toggle="tab">Squad</a></li>
-                                    <li role="presentation" class="active"><a href="#match" aria-controls="match" role="tab" data-toggle="tab">Recent Matches</a></li>
-                                </ul>
-                   <div class="tab-content" style="padding-top:20px;">
-                                    <div role="tabpanel" class="tab-pane " id="details">
+                            <div class="sportsmagazine-fancy-title"><h2>Team Details</h2></div>
+                    
                                         <div class="widget_popular_news">
                                              <div class="sportsmagazine-rich-editor">
-                               
-                                <div class="sportsmagazine-post-tags">
-                                  <div class="sportsmagazine-tags">
-                                    <p>{!!$Events->description!!}</p>
-                                  </div>
-                                  <div class="sportsmagazine-blog-social">
-                                    
-                                   
-                                  </div>
-                               </div>
-                            </div>
-                       </div>
-                                    </div>
-                               <div role="tabpanel" class="tab-pane " id="squad">
-                                <div class="sportsmagazine-player sportsmagazine-player-list">
-                                <ul class="row">
+                                <p>{!!$Events->description!!}</p>
+                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                                <span></span>
+                                </blockquote>
+                              
                                 
+                         
+                                    </div>
+                              </div>
+
+                        <div class="sportsmagazine-fancy-title"><h2>Squad</h2></div>
+                        <div class="sportsmagazine-player sportsmagazine-player-list">
+                                <ul class="row">
+                                   
                                     @foreach ($Players as $item)
                                         
                                    
                                     <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
+                                        <figure><a href="{{url('/player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt=""></a></figure>
+
                                         <div class="sportsmagazine-player-list-text">
                                            
                                             <h5><a href="{{url('/player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}">{{$item->player_name}}</a></h5>
@@ -209,286 +241,23 @@
                                         </div>
                                     </li>
                                     @endforeach
+                                 
+                                   
                                 </ul>
                             </div>
-							</div>
-                                    <div role="tabpanel" class="tab-pane active" id="match">
-                                        <div class="widget_popular_news">
-                                     <table class="sportsmagazine-client-detail">
-                                        <tbody>
-                                                                      
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 03:49:42" class="dt"><a href="#">04 October 2020 | 03:49</a></time></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Mumbai-Indians">Mumbai Indians</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="https://admin.matchtimings.com/assets/team_logo/d5c0d6814a32b4dd92b1f5a1064b15f8.jpg" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Chennai-Super-Kings">Chennai Super Kings</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                             
-                                            
-                                                                      
-                                                                  
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 04:20:17" class="dt"><a href="#">04 October 2020 | 04:20</a></time></td>
-                                                <td>
-                                                    <figure><img src="https://admin.matchtimings.com/assets/team_logo/d5c0d6814a32b4dd92b1f5a1064b15f8.jpg" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Chennai-Super-Kings">Chennai Super Kings</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Mumbai-Indians">Mumbai Indians</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                             
-                                            
-                                                                      
-                                                                  
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 04:20:46" class="dt"><a href="#">04 October 2020 | 04:20</a></time></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Kolkata-Knight-Riders">Kolkata Knight Riders</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="https://www.admin.matchtimings.com/assets/team_logo/95e2b962fe54f296e8c4566b5dcd8a93.jpg" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Delhi-Capitals">Delhi Capitals</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                             
-                                            
-                                                                      
-                                                                  
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 04:21:25" class="dt"><a href="#">04 October 2020 | 04:21</a></time></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Kings-XI-Punjab">Kings XI Punjab</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Sunrisers-Hyderabad">Sunrisers Hyderabad</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                             
-                                            
-                                                                      
-                                                                  
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 04:26:18" class="dt"><a href="#">04 October 2020 | 04:26</a></time></td>
-                                                <td>
-                                                    <figure><img src="https://www.admin.matchtimings.com/assets/team_logo/95e2b962fe54f296e8c4566b5dcd8a93.jpg" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Delhi-Capitals">Delhi Capitals</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Mumbai-Indians">Mumbai Indians</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                             
-                                            
-                                                                      
-                                                                  
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 04:26:49" class="dt"><a href="#">04 October 2020 | 04:26</a></time></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Rajasthan-Royals">Rajasthan Royals</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Sunrisers-Hyderabad">Sunrisers Hyderabad</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                                             
-                                            
-                                                                      
-                                                                  
-                                        
-                                   
-
-
-
-                                            <tr>
-                                                <td><time datetime="2020-10-04 04:27:25" class="dt"><a href="#">04 October 2020 | 04:27</a></time></td>
-                                                <td>
-                                                    <figure><img src="https://admin.matchtimings.com/assets/team_logo/d5c0d6814a32b4dd92b1f5a1064b15f8.jpg" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Chennai-Super-Kings">Chennai Super Kings</a></h6>
-                                                    </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="https://matchtimings.com/public/match-details/Kings-XI-Punjab">Kings XI Punjab</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                                 
-                                
-                            </tbody>
-                        </table>   </div>
-                                    </div>
-                                </div>
-                    </div>
-                          <div class="sportsmagazine-section-heading"><h2>Team Gallery</h2></div>
-                            <div class="sportsmagazine-gallery sportsmagazine-fixture-gallery">
-                                <ul>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/fixture-gallery-img1.jpg" class="fancybox"><img src="extra-images/fixture-gallery-img1.jpg" alt=""><i class="icon-signs23"></i></a>
-                                            <span>12 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="gallery.html">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">May 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/fixture-gallery-img2.jpg" class="fancybox"><img src="extra-images/fixture-gallery-img2.jpg" alt=""><i class="icon-signs23"></i></a>
-                                            <span>11 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="gallery.html">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Feb 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/fixture-gallery-img3.jpg" class="fancybox"><img src="extra-images/fixture-gallery-img3.jpg" alt=""><i class="icon-signs23"></i></a>
-                                            <span>7 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="gallery.html">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">May 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/fixture-gallery-img4.jpg" class="fancybox"><img src="extra-images/fixture-gallery-img4.jpg" alt=""><i class="icon-signs23"></i></a>
-                                            <span>4 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="gallery.html">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Feb 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/fixture-gallery-img5.jpg" class="fancybox"><img src="extra-images/fixture-gallery-img5.jpg" alt=""><i class="icon-signs23"></i></a>
-                                            <span>13 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="gallery.html">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">May 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/fixture-gallery-img6.jpg" class="fancybox"><img src="extra-images/fixture-gallery-img6.jpg" alt=""><i class="icon-signs23"></i></a>
-                                            <span>6 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="gallery.html">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Feb 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
+							<div class="sportsmagazine-pagination">
+                              <ul class="page-numbers">
+                                 <li><a class="previous page-numbers" href="404.html"><span aria-label="Next"><i class="fa fa-angle-left"></i></span></a></li>
+                                 <li><span class="page-numbers current">1</span></li>
+                                 <li><a class="page-numbers" href="404.html">2</a></li>
+                                 <li><a class="page-numbers" href="404.html">3</a></li>
+                                 <li><a class="page-numbers" href="404.html">4</a></li>
+                                 <li><a class="next page-numbers" href="404.html"><span aria-label="Next"><i class="fa fa-angle-right"></i></span></a></li>
+                              </ul>
                             </div>
-                       
-
-
-					   <div class="sportsmagazine-fancy-title"><h2>Recent News</h2></div>
-
-						   <div class="sportsmagazine-prenxt-post">
-                                <ul>
-                                    <li>
-                                        <div class="sportsmagazine-prev-post">
-                                            <figure><a href="404.html"><img src="extra-images/post-img1.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-prev-artical">
-                                                <h3><a href="404.html">The team is starting a new power breakfast regimen</a></h3>
-                                                <a href="404.html" class="sportsmagazine-post-arrow"><i class="fa fa-angle-double-left"></i> Previous Post</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-next-post">
-                                            <figure><a href="404.html"><img src="extra-images/post-img2.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-next-artical">
-                                                <h3><a href="404.html">The team is starting a new power breakfast regimen</a></h3>
-                                                <a href="404.html" class="sportsmagazine-post-arrow">Next Post <i class="fa fa-angle-double-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                      
-                        </div>
+					
+</div>                      
+           </div>
                         
     <aside class="col-md-3">
 
