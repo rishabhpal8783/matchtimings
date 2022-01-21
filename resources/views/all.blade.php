@@ -30,10 +30,10 @@
 						<div class="col-md-9">
 @foreach($articles_datap as $data)
     
-
+                        <div class="col-md-4" >
                             <div class="sportsmagazine-blog sportsmagazine-bloglarge">
                                 <ul class="row">
-                                    <li class="col-md-12">
+                                    <li style="margin:10px" >
                                         <figure><a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt=""></a></figure>
                                         <div class="sportsmagazine-bloglarge-text">
                                             {{-- <time >Tags</time> --}}
@@ -60,6 +60,7 @@
                                     </li> 
                                 </ul>
                             </div>
+                        </div>
                             @endforeach
 
                             <!--// Pagination \\-->
