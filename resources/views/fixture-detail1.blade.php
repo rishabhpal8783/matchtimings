@@ -58,31 +58,24 @@
                              
                                 @foreach($sports_data1 as $data)
                                 <li class="" ><h4 style="display: none;"><a href="#">{{$data->sport_name}}</a></h4>
-
                                     <ul class="">
-                                       
                                         <li class="">
                                             @foreach($data->league as $leag)
                                             <div class="">
-    
-
                                                 <h4 style="display: none;" ><a href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h4>
                                                 <ul class="">
                                                     @foreach($leag->event as $events)
                                                     <li><a href="{{url('/event/'.$events->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name))}}">{{$events->event_name}}</a>
-                                                    
                                                         <ul class="">
                                                             @foreach($events->sesions as $event)
-                                                            
                                                             <li><a href="{{url('/schedule/'.$event->season_id.'/'.str_replace(' ', '-', $event->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$event->season_name}}</a></li>
-                                                         
                                                             @endforeach
                                                         </ul>
                                                     
                                                     </li>
                                                     @endforeach
                                                 </ul>
-                                             
+                                          
                                             </div> @endforeach
                                            
                                         </li>

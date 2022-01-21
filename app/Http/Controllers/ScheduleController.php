@@ -108,6 +108,8 @@ class ScheduleController extends Controller
     }
     public function event($id,$uname,$type,$name)
     {  
+
+      
         $sports=Seasons::all();
         $uname=(str_replace('-', ' ', $uname));
         $name=(str_replace('-', ' ', $name));
