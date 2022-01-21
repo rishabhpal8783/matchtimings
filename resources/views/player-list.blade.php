@@ -14,8 +14,8 @@
                             <div class="sportsmagazine-player-thumb-wrap">
                                 <figure><img src="extra-images/player-text-img.png" alt=""></figure>
                                 <div class="sportsmagazine-player-thumb-text">
-                                    <h2>07</h2>
-                                    <h3>MS  <br><span> Dhoni</span></h3>
+                                    <h2>{{ $Players->player_id}}</h2>
+                                    <h3><span> {{ $Players->player_name}}</span></h3>
                                     <ul class="sportsmagazine-player-info">
                                         <li>
                                             <h5>Nationality:</h5>
@@ -67,41 +67,18 @@
                         <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Recent Series</h2></div>
                                 <ul>
-                                    
-                                    <li>
-                                        <span style="padding-top:0px">01</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">02</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">South Africa VS India</a>
-                                            <time datetime="2008-02-14 20:00">Dec 26, 2021 - Jan 08, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">03</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span style="padding-top:0px">04</span>
-                                        <div class="popular_news_text">
-                                           
-                                            <a href="#">Big BAsh League</a>
-                                            <time datetime="2008-02-14 20:00">Dec 05, 2021 - Jan 28, 2022</time>
-                                        </div>
-                                    </li>
-                                 
+                                    @foreach ($sports_data1 as $item)
 
+                                    <li>
+                                        <span style="padding-top:0px">{{$item->season_id}}</span>
+                                        <div class="popular_news_text">
+                                           
+                                            <a href="{{url('/schedule/'.$item->season_id.'/'.str_replace(' ', '-', $item->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$item->season_name}}</a>
+                                            <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time>
+                                        </div>
+                                    </li>
+                                    @endforeach  
+                                   
                                 </ul>
                             </div>
                             <!--// Widget Popular News \\-->
@@ -113,11 +90,7 @@
                        <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
                                 <!-- Nav tabs -->
-                                <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
-                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
-                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
-                                </ul>
+                               
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
@@ -214,13 +187,7 @@
                         <div class="col-md-6">
                             <div class="sportsmagazine-fancy-title"><h2>Player Description</h2></div>
                             <div class="sportsmagazine-rich-editor">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectet Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna. Nulla volutpat luctus venen Aliquam tellus dui, luctus nec ornare at, aliquet ac nulla. Quisque vitae feugiat eros. Pellentesque tempus tortor nec tellus elp ifend, id dictum nibh volutpat.</p>
-                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum odio. Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consectetur magna, at efficiat est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
-                                <span></span>
-                                </blockquote>
-                                <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum  ti odio. Suspendisse lacinia risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consesactetur magna, at efficit est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
-                               
+                                <p>{!!$Players->description!!}</p>                               
                             </div>
                             <div class="sportsmagazine-fancy-title"><h2>Associated Teams</h2></div>
                             <table class="sportsmagazine-client-detail">
@@ -229,59 +196,25 @@
                                     <th>Teams</th>
                                    
                                 </tr>
-                                <tr>
-                                    <td>Mar 24, 2017</td>
+                        
+                                 
+                            
+                               <tr>
+                                @foreach ($users as $item)
+                                    
+                               <td>
+                                <time datetime="{{$item->created}}" class="dt">{{date('d F Y | H:i', strtotime($item->created));}}</time>
+                               </td>
                                     <td>
                                         <figure><img src="extra-images/player-stats-img1.jpg" alt=""></figure>
                                         <div class="player-stats-text">
-                                            <h6>Ocean Kings</h6>
-                                            <span>Patrick’s Institute</span>
+                                            <h6>{{$item->team_name}}</h6>
+                                            
                                         </div>
                                     </td>
-                                   
+                                    @endforeach
                                 </tr>
-								 <tr>
-                                    <td>Mar 24, 2017</td>
-                                    <td>
-                                        <figure><img src="extra-images/player-stats-img1.jpg" alt=""></figure>
-                                        <div class="player-stats-text">
-                                            <h6>Ocean Kings</h6>
-                                            <span>Patrick’s Institute</span>
-                                        </div>
-                                    </td>
-                                   
-                                </tr>
-								 <tr>
-                                    <td>Mar 24, 2017</td>
-                                    <td>
-                                        <figure><img src="extra-images/player-stats-img1.jpg" alt=""></figure>
-                                        <div class="player-stats-text">
-                                            <h6>Ocean Kings</h6>
-                                            <span>Patrick’s Institute</span>
-                                        </div>
-                                    </td>
-                                   
-                                </tr> <tr>
-                                    <td>Mar 24, 2017</td>
-                                    <td>
-                                        <figure><img src="extra-images/player-stats-img1.jpg" alt=""></figure>
-                                        <div class="player-stats-text">
-                                            <h6>Ocean Kings</h6>
-                                            <span>Patrick’s Institute</span>
-                                        </div>
-                                    </td>
-                                   
-                                </tr> <tr>
-                                    <td>Mar 24, 2017</td>
-                                    <td>
-                                        <figure><img src="extra-images/player-stats-img1.jpg" alt=""></figure>
-                                        <div class="player-stats-text">
-                                            <h6>Ocean Kings</h6>
-                                            <span>Patrick’s Institute</span>
-                                        </div>
-                                    </td>
-                                   
-                                </tr>
+                              
                                </table>
                           
                         </div>

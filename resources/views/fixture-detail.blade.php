@@ -1,12 +1,5 @@
 @include('header')
-        <!--// Header \\-->
 
-
-
-
-
-
-		<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
             
             <!--// Main Section \\-->
@@ -15,16 +8,6 @@
 
                 <div class="container">
                     <div class="row">
-					
-						
-					
-
-                     <!---   <div class="col-md-4">
-                            <div class="sportsmagazine-thumb-team-one">
-                                <figure><img src="extra-images/thumb-team-oneimg.png" alt=""></figure>
-                                
-                            </div>
-                        </div>--->
                         <div class="col-md-12">
                             <div class="sportmagazine-score-counter">
                                 <h4>
@@ -48,18 +31,7 @@
                 </div>
             </div>
             <div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
-            
-                <!--// Main Section \\-->
-             
-               
-    
-    
-    
-               
-    
-            <!--// Main Section \\-->
 
-			<!--// Main Section \\-->
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 				
@@ -124,52 +96,11 @@
 
                                 </ul>
                             </div>
-                            <!--// Widget Popular News \\-->
-
-                
-                
-                         <!--// Widget TeamRanking \\-->
-                 
-                    <!--// Widget series \\-->
-                    <div class="widget widget_next_match">
-                                <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
-                                <div class="widget_next_match_title">
-                                    <h5>Championship Quarter Finals</h5>
-                                    <span>Saturday, May 17th, 2017</span>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-1.png" alt="">
-                                        <h6><a href="fixture-detail.html">Basketball</a></h6>
-                                        <small>Sports And Magazine</small>
-                                    </li>
-                                    <li>
-                                        <div class="widget_next_match_option">
-                                            <h6>09:00 pm</h6>
-                                            <small>Madison Stadium</small>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-2.png" alt="">
-                                        <h6><a href="fixture-detail.html">Combine</a></h6>
-                                        <small>ST Paddy's Institute</small>
-                                    </li>
-                                </ul>
-                                <div class="widget_match_countdown">
-                                    <h6>Game Countdown</h6>
-                                    <div id="sportsmagazine-countdown" class="is-countdown"><span class="countdown-row countdown-show3"><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Minutes</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Seconds</span></span></span></div>
-                                </div>
-                               
-                            </div>    
 
                         <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
                                 <!-- Nav tabs -->
-                                <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
-                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
-                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
-                                </ul>
+                               
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
@@ -282,12 +213,17 @@
                         <div class="sportsmagazine-fancy-title"><h2>Squad</h2></div>
                         <div class="sportsmagazine-player sportsmagazine-player-list">
                                 <ul class="row">
+                                   
+                                    @foreach ($Players as $item)
+                                        
+                                   
                                     <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
+                                        <figure><a href="{{url('/player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt=""></a></figure>
+
                                         <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                         
+                                           
+                                            <h5><a href="{{url('/player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}">{{$item->player_name}}</a></h5>
+                                            <p>{{$item->description}}</p>
                                             <ul class="sportsmagazine-player-social">
                                                 <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
                                                 <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
@@ -296,72 +232,8 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img2.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Sarena jullie</a></h5>
-                                         
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img3.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Chris Morris</a></h5>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img4.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Sophie james</a></h5>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img5.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Brad Haddin</a></h5>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                    @endforeach
+                                 
                                    
                                 </ul>
                             </div>

@@ -74,7 +74,7 @@
                                                         <ul class="">
                                                             @foreach($events->sesions as $event)
                                                             
-                                                            <li><a href="{{url('/event/'.$event->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $event->event_name))}}">{{$event->season_name}}</a></li>
+                                                            <li><a href="{{url('/schedule/'.$event->season_id.'/'.str_replace(' ', '-', $event->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$event->season_name}}</a></li>
                                                          
                                                             @endforeach
                                                         </ul>
@@ -133,68 +133,19 @@
                 
                 
                          <!--// Widget TeamRanking \\-->
-                 
-                    <!--// Widget series \\-->
-                    <div class="widget widget_next_match">
-                                <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
-                                <div class="widget_next_match_title">
-                                    <h5>Championship Quarter Finals</h5>
-                                    <span>Saturday, May 17th, 2017</span>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-1.png" alt="">
-                                        <h6><a href="fixture-detail.html">Basketball</a></h6>
-                                        <small>Sports And Magazine</small>
-                                    </li>
-                                    <li>
-                                        <div class="widget_next_match_option">
-                                            <h6>09:00 pm</h6>
-                                            <small>Madison Stadium</small>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-2.png" alt="">
-                                        <h6><a href="fixture-detail.html">Combine</a></h6>
-                                        <small>ST Paddy's Institute</small>
-                                    </li>
-                                </ul>
-                                <div class="widget_match_countdown">
-                                    <h6>Game Countdown</h6>
-                                    <div id="sportsmagazine-countdown" class="is-countdown"><span class="countdown-row countdown-show3"><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Minutes</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Seconds</span></span></span></div>
-                                </div>
-                               
-                            </div>    
+                   
 
                         <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
                                 <!-- Nav tabs -->
-                                <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
-                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
-                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
-                                </ul>
+                              
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
                                         <div class="widget_popular_news">
                                             <ul>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
+                                                
+                                              
                                                 <li class="widget-theleague">
                                                     <div class="popular_news_text">
                                                         <small>The League</small>
@@ -207,58 +158,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane" id="profile">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -297,12 +197,16 @@
                                <div role="tabpanel" class="tab-pane " id="squad">
                                 <div class="sportsmagazine-player sportsmagazine-player-list">
                                 <ul class="row">
+                                
+                                    @foreach ($Players as $item)
+                                        
+                                   
                                     <li class="col-md-6">
                                         <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
                                         <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
+                                           
+                                            <h5><a href="{{url('/player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}">{{$item->player_name}}</a></h5>
+                                            <p>{{$item->description}}</p>
                                             <ul class="sportsmagazine-player-social">
                                                 <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
                                                 <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
@@ -311,104 +215,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img2.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Sarena jullie</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img3.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Chris Morris</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img4.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Sophie james</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img5.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Brad Haddin</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img6.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img3.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
 							</div>

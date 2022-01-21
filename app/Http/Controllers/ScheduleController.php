@@ -9,6 +9,9 @@ use App\Models\Articles;
 use App\Models\Articletype;
 use App\Models\Tagtypes;
 use App\Models\Events;
+use App\Models\Team;
+use App\Models\Teamplayermapping;
+use App\Models\Players;
 use App\Models\League;   
 use App\Models\Sports;
 use App\Models\Seasons;
@@ -81,7 +84,7 @@ class ScheduleController extends Controller
     public function show($id,$type,$name)
     {
       
-       
+        $Players=Players::where('league_id',$id)->get();
         $name=(str_replace('-', ' ', $name));
         $League=League::where('league_name',$name)->first();
         $articles_data=Articles::all();
@@ -90,7 +93,7 @@ class ScheduleController extends Controller
         $sports=Seasons::all();
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('fixture-detail',compact('League','sports','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
+        return view('fixture-detail',compact('Players','League','sports','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
 
     public function sport($id,$name)
@@ -98,33 +101,41 @@ class ScheduleController extends Controller
        $name=(str_replace('-', ' ', $name));
         $sports_data=Sports::all();
         $sports_data1=Sports::where('sport_id',$id)->first();
+        $Players=Players::where('sport_id',$id)->get();
         $sports=Seasons::all();
-       
-        return view('player-detail',compact('sports','name','sports_data','sports_data1'));
+      
+        return view('player-detail',compact('Players','sports','name','sports_data','sports_data1'));
     }
     public function event($id,$uname,$type,$name)
     {  
         $sports=Seasons::all();
         $uname=(str_replace('-', ' ', $uname));
         $name=(str_replace('-', ' ', $name));
+        $Players=Players::where('event_id',$id)->get();
         $Events=Events::where('event_name',$name)->first();
         $articles_data=Articles::all();
         $sports_data1=Sports::where('sport_name',$uname)->get();
         $sports_data=Sports::all();
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('fixture-detail1',compact('Events','sports','uname','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
+        return view('fixture-detail1',compact('Players','Events','sports','uname','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
-    public function player()
+    public function player($id,$name)
     {  
+        $sports_data1=Seasons::all();
+        $users = DB::table('team_player_mapping')
+        ->join('team', 'team.team_id', '=', 'team_player_mapping.team_id')
+            ->select('team_player_mapping.*','team.*')
+            -> where('team_player_mapping.player_id',$id)
+            ->get();
+        $sports22=Team::where('team_id',$id)->get();
         $sports=Seasons::all();
-       
+        $Players=Players::where('player_id',$id)->first();
         $articles_data=Articles::all();
-       
         $sports_data=Sports::all();
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('player-list',compact('sports_data','articles_data','articles_latest_data','article_type'));
+        return view('player-list',compact('sports_data1','users','Players','sports_data','articles_data','articles_latest_data','article_type'));
     }
     public function  all($name)
     {

@@ -251,12 +251,16 @@
                                <div role="tabpanel" class="tab-pane " id="squad">
                                 <div class="sportsmagazine-player sportsmagazine-player-list">
                                 <ul class="row">
+
+                                    @foreach ($Players as $item)
+                                        
+                                   
                                     <li class="col-md-6">
                                         <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
                                         <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
+                                           
+                                            <h5><a href="{{url('/player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}">{{$item->player_name}}</a></h5>
+                                            <p>{{$item->description}}</p>
                                             <ul class="sportsmagazine-player-social">
                                                 <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
                                                 <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
@@ -265,104 +269,13 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img2.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Sarena jullie</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img3.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Chris Morris</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img4.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Sophie james</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img5.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Brad Haddin</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img6.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-6">
-                                        <figure><a href="player-detail.html"><img src="extra-images/player-list-img3.jpg" alt=""><i class="fa fa-link"></i></a></figure>
-                                        <div class="sportsmagazine-player-list-text">
-                                            <a href="player-detail.html" class="sportsmagazine-forword-btn">Forword</a>
-                                            <h5><a href="player-detail.html">Darren Layfield</a></h5>
-                                            <p>Lorem ipsum dolor  amet, codnse abitur lacinia diam tus temposr iquam et arcu libero. </p>
-                                            <ul class="sportsmagazine-player-social">
-                                                <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
-                                                <li><a href="https://plus.google.com/" class="icon-google-plus2"></a></li>
-                                                <li><a href="https://pk.linkedin.com/" class=" icon-linkedin"></a></li>
-                                                <li><a href="https://twitter.com/login" class="icon-social62"></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                    @endforeach
+                                  
+                                   
+                                   
+                                   
+                                   
+                                   
                                 </ul>
                             </div>
 							</div>

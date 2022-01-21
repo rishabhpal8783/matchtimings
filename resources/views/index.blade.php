@@ -1,24 +1,14 @@
 @include('header')
-<!--// Main Banner \\-->
- 
-<!--// Main Banner \\-->
- 
-<!--// Main Content \\-->
-
 <div class="sportsmagazine-main-content">
         <div class="container" >
             <div class="row">
 
                 <aside class="col-md-3">
 
-                    
-                        <!--// Widget series \\-->
                         <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Recent Series</h2></div>
-
                                 <ul>
                                     @foreach ($sports_data1 as $item)
-
                                     <li>
                                         <span style="padding-top:0px">{{$item->season_id}}</span>
                                         <div class="popular_news_text">
@@ -28,68 +18,19 @@
                                         </div>
                                     </li>
                                     @endforeach
-                                   
-                                 
-
                                 </ul>
                             </div>
-                            <!--// Widget Popular News \\-->
-
-                
-                
-                         <!--// Widget TeamRanking \\-->
-                 
-                    <!--// Widget series \\-->
-                    <div class="widget widget_next_match">
-                                <div class="sportsmagazine-fancy-title"><h2>Next Match</h2></div>
-                                <div class="widget_next_match_title">
-                                    <h5>Championship Quarter Finals</h5>
-                                    <span>Saturday, May 17th, 2017</span>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-1.png" alt="">
-                                        <h6><a href="fixture-detail.html">Basketball</a></h6>
-                                        <small>Sports And Magazine</small>
-                                    </li>
-                                    <li>
-                                        <div class="widget_next_match_option">
-                                            <h6>09:00 pm</h6>
-                                            <small>Madison Stadium</small>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="extra-images/widget-next-match-logo-2.png" alt="">
-                                        <h6><a href="fixture-detail.html">Combine</a></h6>
-                                        <small>ST Paddy's Institute</small>
-                                    </li>
-                                </ul>
-                                <div class="widget_match_countdown">
-                                    <h6>Game Countdown</h6>
-                                    <div id="sportsmagazine-countdown" class="is-countdown"><span class="countdown-row countdown-show3"><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Hours</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Minutes</span></span><span class="countdown-section"><span class="countdown-amount">0</span><span class="countdown-period">Seconds</span></span></span></div>
-                                </div>
-                               
-                            </div>    
-
                         <div class="widget widget_trending_news">
                             @foreach($article_type as $type_data)
                                                 @if($type_data->article_type_name =='Featured News')
                                 <div class="sportsmagazine-fancy-title"> <h4 style="    color: aliceblue;">{{$type_data->article_type_name}}</h4></div>
-                                <!-- Nav tabs -->
-                                {{-- <ul class="nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Newset</a></li>
-                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Most Commented</a></li>
-                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Populer</a></li>
-                                </ul> --}}
-                                <!-- Tab panes -->
+                              
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
                                         <div class="widget_popular_news">
                                             <ul>
                                                 @foreach($articles_data as $data)
                                                 @if($type_data->article_type_id==$data->article_type_id)
-                                                     <!-- Post Item --> 
-                                             
                                                 <li class="widget-theleague">
                                                     <div class="popular_news_text">
                                                    
@@ -104,20 +45,11 @@
                                             </ul>
                                         </div>
                                     </div>
-                                   
-                                
                                 </div>
                                 @endif
                                 @endforeach
                             </div>
-
-                                  
-                
                 </aside> 
-
-
-
-
                  <div class="col-md-6">
                 
                     @foreach($article_type as $type_data)
@@ -141,14 +73,6 @@
                                 @endif
                                 @endforeach
 
-                                {{-- <div class="sportsmagazine-featured-slider-layer">
-                                    <img src="https://admin.matchtimings.com/assets/article/a26d14d435610243c045e5fdaa801bd5.jpg" alt="">
-                                    <span class="sportsmagazine-black-transparent"></span>
-                                    <div class="sportsmagazine-featured-caption">
-                                        <h2>Fusce at molestie elit, sit amet Curabitur in tellus non risu illa vitae non nunc</h2>
-                                        <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
-                                    </div>
-                                </div> --}}
                             </div>
                             @endif
                             @endforeach
