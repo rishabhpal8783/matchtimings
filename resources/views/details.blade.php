@@ -3,29 +3,23 @@
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 @endphp
 @include('header')		<!--// Main Content \\-->
-		<div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
-            
-            <!--// Main Section \\-->
-            <div class="sportsmagazine-main-section sportsmagazine-thumb">
-                <span class="thumb-transparent"></span>
-                <div class="sportsmagazine-thumb-text">
-
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <h2>{{$articles_data->heading1}}</h2>
-                                <ul class="sportsmagazine-thumb-option">
-                                    <li><i class="fa fa-calendar-o"></i> {{date('d F Y | H:i:s', strtotime($articles_data->created));}} </li>
-                                   
-                                    <li><i class="fa fa-user"></i> {{$articles_data->published_by}}</li>
-                                </ul>
-                            </div>
-                        </div>
-
+ <div class="sportsmagazine-subheader">
+            <span class="subheader-transparent"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1> {{$name}}</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <ul class="sportsmagazine-breadcrumb">
+                            <li><a href="{{url('/')}}">Home</a></li>
+                             <li><a href="{{url('all/'.$name)}}"> {{$name}}</a></li> 
+                             <li><a href="{{url('/')}}">{{$articles_data->heading1}}</a>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
             <!--// Main Section \\-->
 
 			<!--// Main Section \\-->
@@ -90,10 +84,10 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                                 <ul class="row">
                                     @foreach($articles_latest_data as $data)
                                     <li class="col-md-4">
-                                        <figure><a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt=""></a></figure>
+                                        <figure><a href="{{url('details/'.str_replace(' ', '-', $data->Artic->article_type_name).'/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt=""></a></figure>
                                         <div class="sportsmagazine-article-text">
                                              <time datetime="2008-02-14 20:00">{{date('d F Y | H:i:s', strtotime($data->created));}}</time>
-                                             <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
+                                             <h5><a href="{{url('details/'.str_replace(' ', '-', $data->Artic->article_type_name).'/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
                                         </div>
                                         <ul class="sportsmagazine-article-options">
                                             <li></i>published By - {{$data->published_by}}</li>
@@ -199,116 +193,26 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                         <!--// SideBar \\-->
                         <aside class="col-md-3">
                             <!--// Widget Upcoming Matches \\-->
-                            <div class="sportsmagazine-widget-heading"><h2>Upcoming Matches</h2></div>
-                            <div class="widget widget_matches">
-                                <ul>
-                                    <li>
-                                        <div class="sportsmagazine-team-one">
-                                            <h6><a href="fixture-detail.html">Ocean Kings</a></h6>
-                                            <span>St. Patrick’s</span>
-                                        </div>
-                                        <span>VS</span>
-                                        <div class="sportsmagazine-team-two">
-                                            <h6><a href="fixture-detail.html">Bloody Wave</a></h6>
-                                            <span>Marine College</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-team-one">
-                                            <h6><a href="fixture-detail.html">LA Pirates</a></h6>
-                                            <span>Bebop Institute</span>
-                                        </div>
-                                        <span>VS</span>
-                                        <div class="sportsmagazine-team-two">
-                                            <h6><a href="fixture-detail.html">Ocean Kings</a></h6>
-                                            <span>Marine College</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-team-one">
-                                            <h6><a href="fixture-detail.html">Red Wings</a></h6>
-                                            <span>Marine College</span>
-                                        </div>
-                                        <span>VS</span>
-                                        <div class="sportsmagazine-team-two">
-                                            <h6><a href="fixture-detail.html">Lucky Clovers</a></h6>
-                                            <span>Elric Bros School</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-team-one">
-                                            <h6><a href="fixture-detail.html">Draconians</a></h6>
-                                            <span>Atlantic School</span>
-                                        </div>
-                                        <span>VS</span>
-                                        <div class="sportsmagazine-team-two">
-                                            <h6><a href="fixture-detail.html">Bloody Wave</a></h6>
-                                            <span>Marine College</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--// Widget Upcoming Matches \\-->
                             
-                            <!--// Widget Popular Post \\-->
-                            <div class="sportsmagazine-widget-heading"><h2>Popular Posts</h2></div>
-                            <div class="widget widget_popular_post">
-                                <ul>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                            <figure><a href="blog-detail.html"><img src="extra-images/widget-popular-post1.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                            <figure><a href="blog-detail.html"><img src="extra-images/widget-popular-post2.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                            <figure><a href="blog-detail.html"><img src="extra-images/widget-popular-post3.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-popular-post">
-                                            <figure><a href="blog-detail.html"><img src="extra-images/widget-popular-post4.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-popular-post-text">
-                                                <h5><a href="blog-detail.html">Mark Johnson has as acture and is gona</a></h5>
-                                                <time datetime="2008-02-14 20:00">August 23rd, 2016</time>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+
+
+
+                            <!--// Widget Upcoming Matches \\-->
+                              <div class="widget widget_team_ranking">
+                        <div class="sportsmagazine-fancy-title">
+                            <h2>Advertisement Corner</h2>
+                        </div>
+                        <div class="widget widget_add">
+                            <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                        </div></br>
+                        <div class="widget widget_add">
+                            <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                        </div>
+                    </div>
                             <!--// Widget Popular Post \\-->
 
                             <!--// Widget Cetagories \\-->
-                            <div class="sportsmagazine-widget-heading"><h2>Cetagories</h2></div>
-                            <div class="widget widget_cetagories">
-                                <ul>
-                                    <li><a href="404.html">Championship <span>( 13 )</span></a></li>
-                                    <li><a href="404.html">Super Ball <span>( 12 )</span></a></li>
-                                    <li><a href="404.html">Football <span>( 04 )</span></a></li>
-                                    <li><a href="404.html">Boxing <span>( 08 )</span></a></li>
-                                    <li><a href="404.html">BasketBall <span>( 13 )</span></a></li>
-                                </ul>
-                            </div>
+                           
                             <!--// Widget Cetagories \\-->
 
                             

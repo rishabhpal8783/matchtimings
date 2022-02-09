@@ -8,6 +8,8 @@ use App\Models\Artictagmapping;
 use App\Models\Articles;
 use App\Models\Articletype;
 use App\Models\Tagtypes; 
+use App\Models\Players;
+use App\Models\Team;
 use App\Models\Sports;
 use App\Models\Seasons;
 use App\Models\Schedules;
@@ -75,13 +77,14 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name,$id)
     {
+        $name=(str_replace('-', ' ', $name));
         $articles_data=Articles::where('article_id',$id)->first();
         $sports_data=Sports::all(); 
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('details',compact('sports_data','articles_data','articles_latest_data','article_type'));
+        return view('details',compact('name','sports_data','articles_data','articles_latest_data','article_type'));
     }
     public function  all($name)
     {
@@ -100,40 +103,22 @@ class ArticlesController extends Controller
         return view('all',compact('name','articles_tag','sports_data','articles_data','articles_latest_data','articles_datap'));
     }
    
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
+public function blog_tag_detail($id,$name){
+ 
+    $name=(str_replace('-', ' ', $name));
+    $articles_datap=Artictagmapping::where('tag_type_id',$id)->get();
+    $articles_data=Articletype::where('article_type_name',$name)->first();
+    $sports_data=Sports::all();
+    foreach( $articles_datap as $value){
+         $value->profile= DB::table('article_tag_mapping')
+         ->join('tag_types', 'article_tag_mapping.tag_type_id', '=', 'tag_types.tag_type_id')
+         ->select('tag_types.tag_type_name', 'tag_types.tag_type_id')
+        -> where('tag_type_name',$name)->get();
+        }
+    $articles_tag=Tagtypes::all();
+    $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
+    return view('all',compact('name','articles_tag','sports_data','articles_data','articles_latest_data','articles_datap'));
+}
 
 
     public function match($id,$name){
@@ -145,11 +130,16 @@ class ArticlesController extends Controller
     
     public function match_details($name){
         $name=(str_replace('-', ' ', $name));
+        $sports=Seasons::all();
+
+      $Team=Team::where('team_name',$name)->first();
+ 
+    $Players=Players::where('sport_id',$Team->sport_id)->get();
+      
         $sports_data=Sports::all();
         $schedule_data=Schedules::latest('created')->get();
-         return view('player-list',compact('name','sports_data','schedule_data'));
-         return view('fixture-detail',compact('name','sports_data','schedule_data'));
-         return view('fixture-detail',compact('name','sports_data','schedule_data'));
+         return view('matchdetails',compact('Players','Team','sports','name','sports_data','schedule_data'));
+       
         
     }
 }

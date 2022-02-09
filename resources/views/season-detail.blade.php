@@ -25,19 +25,16 @@
                         <div class="col-md-12">
                             <div class="sportmagazine-score-counter">
                                 <h4>
-                                <span>{{$name}}</span></h4>
+                                <span>{{$name3}}</span></h4>
 
                                     
                            <ul class="sportsmagazine-breadcrumb" style="margin-top:20px;">
-
-
-
+                            
                             <li><a href="{{url('/')}}">Home </a></li>
-                            <li><a href="{{url('/sport/'.$Events->sport_id.'/'.$uname)}}"> {{$uname}}</a></li>
-                             <li><a href="{{url('/league/'.$id.'/'.$uname.'/'.$type)}}"> {{$type}}</a></li>
-						     <li><a>{{$name}}</a></li>
-						
-
+						    <li><a href="{{url('/sport/'.$sports_data1->sport_id.'/'.$name)}}">{{$name}}</a></li>
+                            <li><a href="{{url('/league/'.$sports_data1->league_id.'/'.$name.'/'.$name1)}}">{{$name1}}</a></li>
+                            <li><a href="{{url('/event/'.$sports_data1->event_id.'/'.$name.'/'.$name1.'/'.$name2)}}">{{$name2}}</a></li>
+                            <li><a>{{$name3}}</a></li>
                         </ul>
                                 </div>
 								
@@ -51,7 +48,7 @@
             <div class="sportsmagazine-main-content sportsmagazine-main-contentminus">
             
                 <!--// Main Section \\-->
-              
+                   
             <!--// Main Section \\-->
 
 			<!--// Main Section \\-->
@@ -61,9 +58,8 @@
 					<div class="row">
 						
 						
-             <aside class="col-md-3">
+                <aside class="col-md-3">
 
-               
                     
                         <!--// Widget series \\-->
                         <div class="widget widget_popular_news">
@@ -85,23 +81,16 @@
 
                                 </ul>
                             </div>
-                            <!--// Widget Popular News \\-->
-
-                
-                
-                         <!--// Widget TeamRanking \\-->
+                          
                    
-
-                        <div class="widget widget_trending_news">
+                            <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
-                                <!-- Nav tabs -->
-                              
-                                <!-- Tab panes -->
+                               
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="home">
                                         <div class="widget_popular_news">
                                             <ul>
-                                                
+                                               
                                               
                                                 @foreach($articles_latest_data as $data)
                                                
@@ -120,79 +109,60 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    
-                                </div>
-                            </div>
 
-                                  
                 
                 </aside> 
                      
-			<div class="col-md-6">
+		 <div class="col-md-6">
 					 
-						 <div class="widget widget_trending_news">
-                            <div class="sportsmagazine-fancy-title"><h2>{{$name}}</h2></div>
+			 <div class="widget widget_trending_news">
+                         <div class="sportsmagazine-fancy-title"><h2>{{$name3}}</h2></div>
                     
-                                        <div class="widget_popular_news">
-                                             <div class="sportsmagazine-rich-editor">
-                                <p>{!!$Events->description!!}</p>
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
-                                <span></span>
-                                </blockquote>
-                              
-                                
-                         
-                                    </div>
-                              </div>
+                    <div class="widget_popular_news">
+                         <div class="sportsmagazine-rich-editor">
+                    <p>{!!$sports_data1->description!!}</p>
+                     <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                     <span></span>
+                 </blockquote>
+                 </div>
+            </div>
+          <div class="sportsmagazine-fancy-title"><h2>{{$name3}}</h2></div>
+           
+          <table class="sportsmagazine-client-detail">
+            <tbody>
+        @foreach( $schedule_data1 as $data)
 
-                        <div class="sportsmagazine-fancy-title"><h2>{{$name}}</h2></div>
-                        <div class="sportsmagazine-player sportsmagazine-player-list">
-                                        
-                                       
-                            <ul class="">
-                             
-                                @foreach($sports_data1 as $data)
-                                <li class="" ><h4 style="display: none;"><a href="#">{{$data->sport_name}}</a></h4>
-    
-                                    <ul class="">
-                                       
-                                        <li class="">
-                                            @foreach($data->league as $leag)
-                                            <div class="popular_news_text">
-    
-    
-                                                <h4 style="display: none;" ><a href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h4>
-                                                <ul class="">
-                                                    @foreach($leag->event as $events)
-                                                    <li  style="overflow:hidden;padding:10px;"><a  style="color: white;" >{{$events->event_name}}</a>
-                                                    
-                                                        <ul class="">
-                                                            @foreach($events->sesions as $event)
-                                                            
-                                                            <li><a href="{{url('/season/'.$event->season_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name).'/'.str_replace(' ', '-', $event->season_name))}}">{{$event->season_name}}</a></li>
-                                                         
-                                                            @endforeach
-                                                        </ul>
-                                                    
-                                                    </li>
-                                                    @endforeach
-                                                </ul>
-                                             
-                                            </div> @endforeach
-                                           
-                                        </li>
-                                     
-                                    </ul>
-                                </li>
-                                @endforeach
-                              </ul>
-                                </li>
-                            </ul>
-                            </div>
-							
-					
-</div>                      
-           </div>
+
+                <tr>
+                    <td><time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time></td>
+                    <td>
+                        <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
+                        <div class="player-stats-text">
+                            <h6><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teama->team_name))}}">{{$data->teama->team_name}}</a></h6>
+                        </div>
+                    </td>
+                    <td><span>VS</span></td>
+                    <td>
+                        <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
+                        <div class="player-stats-text">
+                            <h6><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teamb->team_name))}}">{{$data->teamb->team_name}}</a></h6>
+                        </div>
+                    </td>
+                </tr>
+      
+      
+    @endforeach
+
+</tbody>
+</table>
+
+
+          <a href="{{url('/schedule/'.$id.'/'.$name3.'/Latest-Schedule-match-list-venue-dates-team-list')}}"  class="schedule-btn inline">Full Schedules</a> 
+
+     
+
+    </div>
+</div>            
                         
     <aside class="col-md-3">
 
@@ -208,10 +178,10 @@
                                 <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
                             </div>
                         </div>
-                      
+                     
                 
                 
-                                        </aside>    
+                                         </aside>    
 
 
 					</div>

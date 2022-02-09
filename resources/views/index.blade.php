@@ -34,7 +34,7 @@
                                                 <li class="widget-theleague">
                                                     <div class="popular_news_text">
                                                    
-                                                        <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                                        <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
                                                             <p class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </p>
 
                                                             {{-- <span class="sportsmagazine-color">{{$data->published_by}} </span>                                                       --}}
@@ -66,7 +66,7 @@
                                     <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
                                     <span class="sportsmagazine-black-transparent"></span>
                                     <div class="sportsmagazine-featured-caption">
-                                        <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                        <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
                                         <span class="sportsmagazine-color">{{$data->published_by}} </span>
                                     </div>
                                 </div>
@@ -216,8 +216,9 @@
                                     @foreach( $schedule_data1 as $data)
                                   
                                     @if ($data->season_id==$itam->season_id)    
-                                   <?php $i =  0 ;
-                                    if($i <10){ ?>
+                                   <?php
+                                    $i =  0 ;
+                                    if($i <5){ ?>
 
 
 
@@ -288,7 +289,7 @@
                                      
                                         <div class="popular_news_text">
                                           
-                                            <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                            <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
                                                             <p class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </p>
 
                                         </div>
@@ -437,14 +438,14 @@
                             
                                 <li class="col-md-3 sportsmagazine-the-team">
                                     <figure>
-                                        <a href="{{url('details/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
+                                        <a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
                                         <figcaption>
                                             {{-- <span><small>The Team</small></span> --}}
                                             {{-- <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a> --}}
                                         </figcaption>
                                     </figure>
                                     <section>
-                                        <h2><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
+                                        <h2><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
                                         <p>{{substr($data->summary_outline_description,0,157)}}</p>
                                     </section>
                                     <div class="sportsmagazine-blog-grid-options">
@@ -491,9 +492,9 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <h5><a href="{{url('details/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
+                                            <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
                                             <span class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </span>
-                                            <p>{{substr($data->summary_outline_description,0,157)}}...<a href="{{url('details/'.$data->article_id)}}">Read More [+]</a></p>
+                                            <p>{{substr($data->summary_outline_description,0,157)}}...<a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">Read More [+]</a></p>
                                         </div>
                                     </div>
                                 </div>

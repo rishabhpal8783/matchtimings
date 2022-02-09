@@ -43,7 +43,7 @@
 
                                 </ul>
                             </div>
-                            
+{{--                             
                     <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
                               
@@ -136,7 +136,7 @@
                             </div>
 
                                           
-                
+                 --}}
                 </aside> 
 
                 <div class="col-md-6">
@@ -215,39 +215,12 @@
                     <!--// Widget TeamRanking \\-->
 
                      <!--// Widget Upcoming Matches \\-->
-                     <div class="sportsmagazine-widget-heading">
-                        <h2>Upcoming Matches</h2>
-                    </div>
-                    <div class="widget widget_matches">
-                        <ul>
-                            <li>
-                                <div class="sportsmagazine-team-one">
-                                    <h6><a href="fixture-detail.html">Ocean Kings</a></h6>
-                                    <span>St. Patrick’s</span>
-                                </div>
-                                <span>VS</span>
-                                <div class="sportsmagazine-team-two">
-                                    <h6><a href="fixture-detail.html">Bloody Wave</a></h6>
-                                    <span>Marine College</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                   
+                  
                     <!--// Widget Upcoming Matches \\-->
 
                     <!--// Widget Cetagories \\-->
-                    <div class="sportsmagazine-widget-heading">
-                        <h2>Cetagories</h2>
-                    </div>
-                    <div class="widget widget_cetagories">
-                        <ul>
-                            <li><a href="404.html">Championship <span>( 13 )</span></a></li>
-                            <li><a href="404.html">Super Ball <span>( 12 )</span></a></li>
-                            <li><a href="404.html">Football <span>( 04 )</span></a></li>
-                            <li><a href="404.html">Boxing <span>( 08 )</span></a></li>
-                            <li><a href="404.html">BasketBall <span>( 13 )</span></a></li>
-                        </ul>
-                    </div>
+                  
                     <!--// Widget Cetagories \\-->
 
                     <!--// Widget TeamRanking \\-->

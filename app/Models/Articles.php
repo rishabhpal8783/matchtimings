@@ -9,4 +9,8 @@ class Articles extends Model
 {
     protected $table="articles";
     protected $fillable=['article_id','sport_id','league_id','event_id','season_id','article_type_id','heading1','heading2','image','image_desc','video_url','summary_outline_description','detail_description','published_by','status','created','modified','createdBy','modifiedBy'];
+    public function Artic()
+    {
+        return $this->belongsTo(Articletype::class,'article_type_id','article_type_id');
+    }
 }
