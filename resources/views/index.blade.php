@@ -192,7 +192,70 @@
                                     </div>
                                 </div>
                     </div>
-                    <div class="widget widget_trending_news">
+                  </div>
+
+
+
+
+                <aside class="col-md-3">
+
+                        <!--// Widget TeamRanking \\-->
+                        <div class="widget widget_team_ranking">
+                            <div class="sportsmagazine-fancy-title">
+                                <h2>Advertisement Corner</h2>
+                            </div>
+                            <div class=" widget_add">
+                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="widget widget_team_ranking">
+                            
+                            <div class=" widget_add">
+                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                            </div>
+                        </div>
+                        <!--// Widget TeamRanking \\-->
+                        <div class="widget widget_popular_news">
+
+                            @foreach($article_type as $type_data)
+                    @if($type_data->article_type_name =='Featured News')
+                                <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
+                                <ul>
+                                    @foreach($articles_data as $data)
+                                    @if($type_data->article_type_id==$data->article_type_id)
+                                    <li>
+                                     
+                                        <div class="popular_news_text">
+                                          
+                                            <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                                            <p class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </p>
+
+                                        </div>
+                                    </li>
+                                    @endif
+                                    @endforeach
+    
+                                  
+                                </ul>
+                                @endif
+                                @endforeach
+
+                            </div>
+                            <!--// Widget Popular News \\-->
+                 </aside>    
+                           
+
+            
+                        
+                           
+            
+            
+            
+            
+            </div>
+            <div class="col-md-12">
+            <div class="widget widget_trending_news">
                         <div class="sportsmagazine-classic-heading">
                             <h2>Coming Up</h2>
                         </div>
@@ -241,7 +304,7 @@
                                             </tr>
                                           <?php  $i++;
                                         }
-?>
+                                            ?>
                                    
                                             
                                     @endif
@@ -259,169 +322,6 @@
 
 
                     </div>
-
-                </div>
-
-
-
-
-                <aside class="col-md-3">
-
-                        <!--// Widget TeamRanking \\-->
-                        <div class="widget widget_team_ranking">
-                            <div class="sportsmagazine-fancy-title">
-                                <h2>Advertisement Corner</h2>
-                            </div>
-                            <div class=" widget_add">
-                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
-                            </div>
-                        </div>
-                        <!--// Widget TeamRanking \\-->
-                        <div class="widget widget_popular_news">
-
-                            @foreach($article_type as $type_data)
-                    @if($type_data->article_type_name =='Featured News')
-                                <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
-                                <ul>
-                                    @foreach($articles_data as $data)
-                                    @if($type_data->article_type_id==$data->article_type_id)
-                                    <li>
-                                     
-                                        <div class="popular_news_text">
-                                          
-                                            <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
-                                                            <p class="data-info">{{date('d F Y | H:i:s', strtotime($data->created));}} </p>
-
-                                        </div>
-                                    </li>
-                                    @endif
-                                    @endforeach
-    
-                                  
-                                </ul>
-                                @endif
-                                @endforeach
-
-                            </div>
-                            <!--// Widget Popular News \\-->
-
-                
-                
-                         <!--// Widget TeamRanking \\-->
-                    {{-- <div class="widget widget_team_ranking">
-                        <div class="sportsmagazine-fancy-title">
-                            <h2>Score Boards</h2>
-                        </div>
-                        <div class="ranking-title-table">
-                            <ul class="ranking-title-row">
-                                <li>Team Rank</li>
-                                <li>M</li>
-                                <li>W</li>
-                                <li>PTS</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>1</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-1.png')}}" alt="">
-                                    <div class="ranking-logo"><span>L.A Pirates</span> <small>Bebop Institute</small> </div>
-                                </li>
-                                <li>08</li>
-                                <li>08</li>
-                                <li>16</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>2</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-2.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Ocean Kings</span> <small>Icarus College</small> </div>
-                                </li>
-                                <li>08</li>
-                                <li>07</li>
-                                <li>14</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>3</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-3.png')}}" alt="">
-                                    <div classsportsmagazine-fancy-title="ranking-logo"><span>Red Wings</span> <small>Marine College</small> </div>
-                                </li>
-                                <li>07</li>
-                                <li>07</li>
-                                <li>14</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>4</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-4.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Lucky Clovers</span> <small>Elric Bros School</small> </div>
-                                </li>
-                                <li>07</li>
-                                <li>06</li>
-                                <li>12</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>5</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-5.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Draconians</span> <small>Atlantic School</small> </div>
-                                </li>
-                                <li>06</li>
-                                <li>05</li>
-                                <li>10</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>6</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-6.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Bloody Wave</span> <small>Marine College</small> </div>
-                                </li>
-                                <li>06</li>
-                                <li>04</li>
-                                <li>08</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>7</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-7.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Ocean Kings</span> <small>St. Patrick’s Institute</small> </div>
-                                </li>
-                                <li>06</li>
-                                <li>04</li>
-                                <li>08</li>
-                            </ul>
-                        </div>
-                        <div class="ranking-content-table">
-                            <ul class="ranking-content-row">
-                                <li>8</li>
-                                <li> <img src="{{url('assets/extra-images/ranking-widget-flag-2.png')}}" alt="">
-                                    <div class="ranking-logo"><span>Sharks</span> <small>Icarus College</small> </div>
-                                </li>
-                                <li>06</li>
-                                <li>02</li>
-                                <li>04</li>
-                            </ul>
-                        </div>
-                    </div> --}}
-                    <!--// Widget TeamRanking \\-->
-                 </aside>    
-                           
-
-            
-                        
-                           
-            
-            
-            
-            
-            </div>
-            <div class="col-md-12">
                     @foreach($article_type as $type_data)
                     @if($type_data->article_type_name!='Recent News')
                     <div class="sportsmagazine-fancy-title">
