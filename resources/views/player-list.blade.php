@@ -87,7 +87,7 @@
                 
                          <!--// Widget TeamRanking \\-->
                  
-                       <div class="widget widget_trending_news">
+                       {{-- <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
                                 <!-- Nav tabs -->
                                
@@ -177,7 +177,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                                   
                 
@@ -220,9 +220,19 @@
                         </div>
                         
                     <aside class="col-md-3">
-
-                        <!--// Widget TeamRanking \\-->
                         <div class="widget widget_team_ranking">
+                            <div class="sportsmagazine-fancy-title">
+                                <h2>Advertisement Corner</h2>
+                            </div>
+                            <div class=" widget_add">
+                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                            </div></br>
+                            <div class=" widget_add">
+                                <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                            </div>
+                        </div>
+                        <!--// Widget TeamRanking \\-->
+                        {{-- <div class="widget widget_team_ranking">
                             <div class="sportsmagazine-fancy-title">
                                 <h2>Advertisement Corner</h2>
                             </div>
@@ -275,13 +285,13 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                             <!--// Widget Popular News \\-->
 
                 
                 
                          <!--// Widget TeamRanking \\-->
-                    <div class="widget widget_team_ranking">
+                    {{-- <div class="widget widget_team_ranking">
                         <div class="sportsmagazine-fancy-title">
                             <h2>Score Boards</h2>
                         </div>
@@ -381,7 +391,7 @@
                                 <li>04</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <!--// Widget TeamRanking \\-->
                  </aside>    
 

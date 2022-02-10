@@ -103,84 +103,84 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                               <div class="sportsmagazine-section-heading"><h2>Comments</h2></div>
                               <ul class="comment-list">
                                  <li>
+                                     @foreach ($Comment_data as $item)
+                                         
+                                    
                                     <div class="thumb-list">
                                        <figure><img alt="" src="extra-images/comment-img1.jpg"></figure>
                                        <div class="text-holder">
-                                          <h6>Albert Darren</h6>
-                                          <time class="post-date" datetime="2008-02-14 20:00">1 Hour Ago </time>
+                                          <h6>{{ $item->name}}</h6>
+                                          <time class="post-date" datetime="2008-02-14 20:00">{{ $item->created_at}} </time>
                                           <a class="comment-reply-link" href="#">Reply</a>
                                        </div>
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna.</p>
+                                       <p>{{ $item->message	}}</p>
                                     </div>
-                                    <div class="thumb-list">
-                                       <figure><img alt="" src="extra-images/comment-img2.jpg"></figure>
-                                       <div class="text-holder">
-                                          <h6>Albert Darren</h6>
-                                          <time class="post-date" datetime="2008-02-14 20:00">1 Hour Ago </time>
-                                          <a class="comment-reply-link" href="#">Reply</a>
-                                       </div>
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna.</p>
-                                    </div>
-                                    <ul class="children">
-                                       <li>
-                                          <div class="thumb-list">
-                                             <figure><img alt="" src="extra-images/comment-img3.jpg"></figure>
-                                             <div class="text-holder">
-                                                <h6>Jeans Morris</h6>
-                                                <time class="post-date" datetime="2008-02-14 20:00">1 Hour Ago </time>
-                                                <a class="comment-reply-link" href="#">Reply</a>
-                                             </div>
-                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consetur ed vit dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna.</p>
-                                          </div>
-                                       </li>
-                                       <!-- #comment-## -->
-                                    </ul>
+                                    @endforeach
+                                  
                                     <!-- .children -->
                                  </li>
                                  <!-- #comment-## -->
-                                 <li>
-                                    <div class="thumb-list">
-                                       <figure><img alt="" src="extra-images/comment-img4.jpg"></figure>
-                                       <div class="text-holder">
-                                          <h6>Ricky David</h6>
-                                          <time class="post-date" datetime="2008-02-14 20:00">1 Hour Ago </time>
-                                          <a class="comment-reply-link" href="#">Reply</a>
-                                       </div>
-                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus tempor consectetur. Sed vitae dignissim purus, eget aliquam libero. Duis et arcu a erat venenatis ornare eget nec urna.</p>
-                                    </div>
-                                 </li>
+                                
                                  <!-- #comment-## -->
                               </ul>
                               <!--// coments \\-->
                               <!--// comment-respond \\-->
                               <div class="comment-respond sportsmagazine-contact-form">
                                <div class="sportsmagazine-section-heading"><h2>Write A Comment</h2></div>
-                               <form>
+                               <form id="contact-formc" method="POST">
+                                @csrf
                                     <ul>
                                         <li>
                                             <label>Name:</label>
                                             <p>
-                                                <input value="Type here" onblur="if(this.value == '') { this.value ='Type here'; }" onfocus="if(this.value =='Type here') { this.value = ''; }" type="text">
+                                                <input id="name" name="name" placeholder="Name" required="" value="Type here" onblur="if(this.value == '') { this.value ='Type here'; }" onfocus="if(this.value =='Type here') { this.value = ''; }" type="text">
                                                 <span><i class="fa fa-user"></i></span>
                                             </p>
                                         </li>
                                         <li>
                                             <label>Email:</label>
                                             <p>
-                                                <input value="Type here" onblur="if(this.value == '') { this.value ='Type here'; }" onfocus="if(this.value =='Type here') { this.value = ''; }" type="text">
+                                                <input id="email" name="email" placeholder="E-Mail" required="" value="Type here" onblur="if(this.value == '') { this.value ='Type here'; }" onfocus="if(this.value =='Type here') { this.value = ''; }" type="text">
                                                 <span><i class="fa fa-envelope"></i></span>
                                             </p>
+
                                         </li>
+                                        <input  type="hidden" id="status" name="status" value={{$id}}>
                                         <li class="full-input">
                                             <label>Comment:</label>
                                             <p>
-                                                <textarea name="u_msg" placeholder="Type here"></textarea>
+                                                <textarea name="message" id="message" placeholder="Type here"></textarea>
                                                 <span><i class="fa fa-comment"></i></span>
                                             </p>
 
                                         </li>
+                                              <span class="text-danger" style="color:red; position: relative;top: -10px;" id="capp"></span>  
+                                            <div class="col-lg-12 mb-35">
+                                              
+                                                <input class="from-control" type="text" id="captchap"  >
+                                            </div>
+                                       <small class="captcha"
+                                        style="
+                                        text-align: center;
+                                        display: inline-block;
+                                        font-size: 15px;
+                                        background: #ededed;
+                                        padding: 8px;
+                                        "
+                                        >     
+                                <?php $a=rand(00,99);
+                                                        $b=rand(0,9);
+                                                        $c=rand(0,9);
+                                                        echo $a."+".$b."-".$c;
+                                                    ?>                   
+                        </small>
+					    <div class="row">
+							<div class="col-sm-12 col-md-12 col-12 col-lg-12 col-xl-12">
+								<input type="hidden"  class="form-control captcha1" placeholder="Captcha" id="captchap1" value="<?php  echo $c=$a+$b-$c;?>">
+							</div>
+                        </div> 
                                         <li>
-                                            <p><label><input value="Submit" type="submit"></label></p>
+                                            <p><label><input class="submit" value="Submit" type="submit"></label></p>
                                         </li>
                                     </ul>
                                 </form>
@@ -248,3 +248,36 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 		<!--// Footer \\-->
        @include('footer')
+       <script>
+    
+        $('#contact-formc').on("submit",function(e){ 
+         e.preventDefault();
+        $c= $('#captchap').val();
+        $c1= $('#captchap1').val();
+        if($c==$c1)
+        {
+         var formData=new FormData(this);
+         $.ajax({
+             url:"{{url('add_comment')}}",
+             type:"POST",
+             data:formData,
+             dataType: 'json',
+             contentType:false,
+             processData:false,
+             success: function(data) {
+              if(data.success)
+              {
+                alert(data.success);
+                location.reload();    
+              }
+             }
+         });
+        }
+        else
+        {
+          $('#capp').html("Captcha Not Matched!");
+        }
+        
+     });
+     </script>
+            

@@ -30,4 +30,5 @@ Route::get('league/{id}/{type}/{name}',[ScheduleController::class,'show'])->name
 Route::get('event/{id}/{uname}/{type}/{name}',[ScheduleController::class,'event'])->name('event');
 Route::get('player/{id}/{name}',[ScheduleController::class,'player'])->name('player');
 Route::get('season/{id}/{name}/{name1}/{name2}/{name3}',[ScheduleController::class,'season'])->name('season');
+Route::post('add_comment',[ScheduleController::class,'add_comment'])->name('add_comment');
 

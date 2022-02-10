@@ -12,6 +12,7 @@ use App\Models\Players;
 use App\Models\Team;
 use App\Models\Sports;
 use App\Models\Seasons;
+use App\Models\Comment; 
 use App\Models\Schedules;
 use App\Models\Matchlevels;
 
@@ -79,12 +80,14 @@ class ArticlesController extends Controller
      */
     public function show($name,$id)
     {
+        $id=$id;
+        $Comment_data=Comment::where('blog_id',$id)->latest('created_at')->limit(10)->get();
         $name=(str_replace('-', ' ', $name));
         $articles_data=Articles::where('article_id',$id)->first();
         $sports_data=Sports::all(); 
         $article_type=Articletype::all();
         $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
-        return view('details',compact('name','sports_data','articles_data','articles_latest_data','article_type'));
+        return view('details',compact('Comment_data','id','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
     public function  all($name)
     {
@@ -107,14 +110,32 @@ public function blog_tag_detail($id,$name){
  
     $name=(str_replace('-', ' ', $name));
     $articles_datap=Artictagmapping::where('tag_type_id',$id)->get();
+
+
+
+
+
+    $articles_datap = DB::table('article_tag_mapping')
+    ->join('articles', 'articles.article_id', '=', 'article_tag_mapping.article_id')    
+    -> where('tag_type_id',$id)->get()->toArray();
+
+
+
+
     $articles_data=Articletype::where('article_type_name',$name)->first();
     $sports_data=Sports::all();
     foreach( $articles_datap as $value){
+
+       
          $value->profile= DB::table('article_tag_mapping')
          ->join('tag_types', 'article_tag_mapping.tag_type_id', '=', 'tag_types.tag_type_id')
          ->select('tag_types.tag_type_name', 'tag_types.tag_type_id')
-        -> where('tag_type_name',$name)->get();
+        -> where('tag_type_name',$id)->get();
         }
+        // print_r($articles_datap);
+        // die();
+        //$articles_datap=Articletype::where('article_id',$articles_datap->article_id)->get();
+      
     $articles_tag=Tagtypes::all();
     $articles_latest_data=Articles::latest('created')->limit(3)->get(); 
     return view('all',compact('name','articles_tag','sports_data','articles_data','articles_latest_data','articles_datap'));

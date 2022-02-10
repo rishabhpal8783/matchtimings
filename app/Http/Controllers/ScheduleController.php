@@ -14,6 +14,7 @@ use App\Models\Teamplayermapping;
 use App\Models\Players;
 use App\Models\League;   
 use App\Models\Sports;
+use App\Models\Comment;  
 use App\Models\Seasons;
 use App\Models\Schedules;
 use App\Models\Matchlevels;
@@ -227,5 +228,25 @@ class ScheduleController extends Controller
          return view('fixture-detail',compact('name','sports_data','schedule_data'));
          return view('fixture-detail',compact('name','sports_data','schedule_data'));
         
+    }
+  
+    public function add_comment(Request $request)
+    {
+ 
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'message'=>'required',
+            'status'=>'required'
+        ]);
+      
+        $data=new Comment;
+        $data->name=$request->input('name');
+        $data->email=$request->input('email');
+        $data->message=$request->input('message');
+        $data->blog_id=$request->input('status');
+        $data->save();
+        //  redirect('contact')->with('toast_success', 'Your Contact has been submitted successfully');
+         return response()->json(['success'=>'Your Contact has been submitted successfully']);
     }
 }

@@ -308,7 +308,7 @@
                 
                 
                          <!--// Widget TeamRanking \\-->
-                    <div class="widget widget_team_ranking">
+                    {{-- <div class="widget widget_team_ranking">
                         <div class="sportsmagazine-fancy-title">
                             <h2>Score Boards</h2>
                         </div>
@@ -408,7 +408,7 @@
                                 <li>04</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <!--// Widget TeamRanking \\-->
                  </aside>    
                            

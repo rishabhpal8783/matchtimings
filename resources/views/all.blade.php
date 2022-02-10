@@ -71,9 +71,19 @@
                         
                         <!--// SideBar \\-->
                         <aside class="col-md-3">
-                            
+                            <div class="widget widget_team_ranking">
+                                <div class="sportsmagazine-fancy-title">
+                                    <h2>Advertisement Corner</h2>
+                                </div>
+                                <div class=" widget_add">
+                                    <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                                </div></br>
+                                <div class=" widget_add">
+                                    <img src="{{url('assets/extra-images/add.jpg')}}" alt="">
+                                </div>
+                            </div>
                             <!--// Widget Popular Post \\-->
-                            <div class="sportsmagazine-widget-heading"><h2>Popular Posts</h2></div>
+                            {{-- <div class="sportsmagazine-widget-heading"><h2>Popular Posts</h2></div>
                             <div class="widget widget_popular_post">
                                 <ul>
                                     <li>
@@ -117,7 +127,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                             <!--// Widget Popular Post \\-->
 
                          

@@ -82,7 +82,7 @@
                             <!--// Widget Popular News \\-->
 
                   
-
+{{-- 
                         <div class="widget widget_trending_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Top Trending News</h2></div>
                                 <!-- Nav tabs -->
@@ -177,7 +177,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                                   
                 
@@ -235,7 +235,7 @@
                             </div>
                         </div>
                         <!--// Widget TeamRanking \\-->
-                        <div class="widget widget_popular_news">
+                        {{-- <div class="widget widget_popular_news">
                                 <div class="sportsmagazine-fancy-title"><h2>Popular News</h2></div>
                                 <ul>
                                     <li>
@@ -280,12 +280,12 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!--// Widget Popular News \\-->
+                            <!--// Widget Popular News \\--> --}}
 
                 
                 
                          <!--// Widget TeamRanking \\-->
-                    <div class="widget widget_team_ranking">
+                    {{-- <div class="widget widget_team_ranking">
                         <div class="sportsmagazine-fancy-title">
                             <h2>Score Boards</h2>
                         </div>
@@ -385,7 +385,7 @@
                                 <li>04</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <!--// Widget TeamRanking \\-->
                  </aside>    
 
