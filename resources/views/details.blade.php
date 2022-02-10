@@ -28,16 +28,27 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 					<div class="row">
 
                         <div class="col-md-9">
-                            <div class="main_img_blg">
-                                <img src="https://admin.matchtimings.com/assets/article/{{$articles_data->image}}" width="100%">
+                        <div class="row">
+                                <div class="col-md-8">
+                                        <div class="main_img_blg">
+                                    <img src="https://admin.matchtimings.com/assets/article/{{$articles_data->image}}" width="100%">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sportsmagazine-rich-editor">
+                                        <blockquote>{{$articles_data->summary_outline_description}}
+                                            <span></span>
+                                            </blockquote>
+                                            <p>{{$articles_data->image_desc}}</p>
+                                    
+                                            <p>{{$articles_data->detail_description}}</p>
+                                    
+                                    </div>
+                                </div>
                             </div>
+                           
                             <div class="sportsmagazine-rich-editor">
-                                <blockquote>{{$articles_data->summary_outline_description}}
-                                    <span></span>
-                                    </blockquote>
-                                    <p>{{$articles_data->image_desc}}</p>
-                               
-                                    <p>{{$articles_data->detail_description}}</p>
+                             
                                
                                
                                

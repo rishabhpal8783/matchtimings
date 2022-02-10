@@ -41,6 +41,7 @@
                                             <h5><a href="{{url('details/'.$name.'/'.$data->article_id)}}">{{$data->heading1}}</a></h5>
                                             <p>{{$data->heading2}}</p>
                                             <a href="{{url('details/'.$name.'/'.$data->article_id)}}" class="sportsmagazine-readmore-btn">READ MORE <i class="fa fa-arrow-circle-o-right"></i></a>
+                                            <ul class="sportsmagazine-article-options"> <li><a href="#"><i class="fa fa-user"></i> {{$data->published_by}}</a></li></ul>
                                             <ul class="sportsmagazine-article-options">
                                                 {{-- <li><a href="#404.html"><i class="fa fa-thumbs-o-up"></i> 320</a></li>
                                                 <li><a href="#404.html"><i class="fa fa-eye"></i> 840</a></li> --}}
@@ -49,13 +50,12 @@
                                                     @foreach($data->profile as $new) 
                                                     {{-- <button class="b2">{{$new->tag_type_name}}</button> --}}
                                       
-                                                    <a href="{{url('/tags/'.$new->tag_type_id.'/'.str_replace(' ', '-', $new->tag_type_name))}}" class="tag article tdh">{{$new->tag_type_name}}</a>
+                                                    <a href="{{url('/tags/'.$new->tag_type_id.'/'.str_replace(' ', '-', $new->tag_type_name))}}" class="schedule-btn rt">{{$new->tag_type_name}}</a>
                                                 </li>
                                                     @endforeach
                                                     @endif
                                                 </li>
-                                                <li><a href="#"><i class="fa fa-user"></i> {{$data->published_by}}</a></li>
-
+                                               
                                             </ul>
                                         </div>
                                     </li> 

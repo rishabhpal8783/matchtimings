@@ -425,8 +425,9 @@ address {
 .sportsmagazine-header-one {
     float: left;
     width: 100%;
-    background: url(assets/images/search-modal-bg.jpg);
-    background-size: cover;
+    background-color: #000;
+    /* background: url(assets/images/search-modal-bg.jpg);
+    background-size: cover; */
 }
 
 
@@ -487,8 +488,8 @@ address {
     float: left;
     width: 100%;
     height: 60px;
-    padding-top: 20px;
-    padding-bottom: 75px;
+    padding-top: 30px;
+    padding-bottom: 80px;
 }
 
 
@@ -1563,7 +1564,8 @@ li.row.mega_innr {
 .sportsmagazine-fancy-title {
     float: left;
     width: 100%;
-    background: url(assets/images/fancytitle-pattren.png);
+    background-color: #4e4e4e;
+    /* background: url(assets/images/fancytitle-pattren.png); */
     border-bottom: 2px solid;
     padding: 17px 29px;
     position: relative;
@@ -11428,6 +11430,7 @@ ul.sportsmagazine-megalist li a:hover {
 .inline {
     display: inline-block !important;
     margin: 0px;
+    float: right !important;
 }
 
 .schedule-btn {
@@ -11438,6 +11441,11 @@ ul.sportsmagazine-megalist li a:hover {
     background-color: #ffdc11;
     padding: 5px 15px;
     font-weight: 600;
+}
+
+.rt{
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .schedule-btn:hover {
