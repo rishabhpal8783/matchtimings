@@ -122,7 +122,7 @@
                              
                                 @foreach($sports_data1 as $data)
                                 <li class=""><h4 style="display: none;"><a href="#">{{$data->sport_name}}</a></h4>
-        
+                                    
                                     <ul class="">
                                        
                                         <li class="">

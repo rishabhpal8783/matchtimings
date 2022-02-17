@@ -26,13 +26,13 @@
     <!--// Main Wrapper \\-->
     <div class="sportsmagazine-main-wrapper">
         <!--// Add hare Start \\-->
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="top_add">
                     <img src="{{url('assets/images/add-top.PNG')}}" width="100%">
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--// Add hare End\\-->
 
@@ -92,15 +92,19 @@
                                                 <ul class="sportsmagazine-megamenu">
                                                    
                                                     <li class="row mega_innr">
+                                                    <!-- <img src="{{url('assets/extra-images/add.jpg')}}" style="height:220px; float:right;" alt=""> -->
                                                         @foreach($data->league as $leag)
                                                         <div class="col-md-4">
-                                                            <h4><a href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h4>
+                                                         
+                                                        <div class="sportsmagazine-fancy-title"><h2 ><a style="color:#fff" href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h2></div>
                                                             <ul class="sportsmagazine-megalist">
                                                                 @foreach($leag->event as $events)
                                                                 <li><a href="{{url('/event/'.$events->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name))}}">{{$events->event_name}}</a></li>
                                                                 @endforeach
                                                             </ul>
-                                                        </div> @endforeach
+                                                        </div>
+                                                         @endforeach
+                                              
                                                     </li>
                                                    
                                                 </ul>
@@ -110,6 +114,7 @@
                                             </li>
                                         </ul>
                                     </div>
+                                    
                                 </nav>
                             </div>
                         </div>

@@ -259,15 +259,18 @@
                         <div class="sportsmagazine-classic-heading">
                             <h2>Coming Up</h2>
                         </div>
+                        <div class="scroll">
                         <ul class="nav-tabs" role="tablist">
+                       
                             @foreach($sports_data1 as $data)
                             <li role="presentation" class="{{ $data->season_id == 1 ? 'active' : '' }}">
                                 <a href="#home{{ $data->season_id }}" aria-controls="home" role="tab" data-toggle="tab">{{$data->season_name }}</a>
                               </li>
                             {{-- <li role="presentation" class="schedules_tab "><a href="#{{$data->season_name}}" aria-controls="home" role="tab" data-toggle="tab">{{$data->season_name}}</a></li> --}}
                             @endforeach
-                           
+                        
                         </ul>
+                        </div>
                         <!-- Tab panes -->
 
                         <div class="tab-content">
