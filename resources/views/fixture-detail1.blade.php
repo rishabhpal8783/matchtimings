@@ -136,9 +136,9 @@
                                         <div class="widget_popular_news">
                                              <div class="sportsmagazine-rich-editor">
                                 <p>{!!$Events->description!!}</p>
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                                <!-- <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
                                 <span></span>
-                                </blockquote>
+                                </blockquote> -->
                               
                                 
                          

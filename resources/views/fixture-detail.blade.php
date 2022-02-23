@@ -105,14 +105,14 @@
                             <div class="sportsmagazine-fancy-title"><h2>{{$name}}</h2></div>
                     
                                         <div class="widget_popular_news">
-                                             <div class="sportsmagazine-rich-editor">
+                                             <div class="sportsmagazine-rich-editor" style="padding:10px;">
                                 <p> {!!$League->description!!}    </p>
-                                <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                                <!-- <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
                                 <span></span>
                                 </blockquote>
                                 <p>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condimentum  ti odio. Suspendisse lacinia risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna eu orci. Phasellus tempor consesactetur magna, at efficit est malesuada ac. Phasellus non ipsum diam. Suspendisse potenti.</p>
                                 
-                         
+                          -->
                                     </div>
                               </div>
 

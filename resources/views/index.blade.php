@@ -10,11 +10,11 @@
                                 <ul>
                                     @foreach ($sports_data1 as $item)
                                     <li>
-                                        <span style="padding-top:0px">{{$item->season_id}}</span>
+                                        <!-- <span style="padding-top:0px">{{$item->season_id}}</span> -->
                                         <div class="popular_news_text">
                                            
                                             <a href="{{url('/schedule/'.$item->season_id.'/'.str_replace(' ', '-', $item->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}">{{$item->season_name}}</a>
-                                            <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time>
+                                             <!-- <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time> -->
                                         </div>
                                     </li>
                                     @endforeach
@@ -64,9 +64,9 @@
                                 @if($type_data->article_type_id==$data->article_type_id)
                                 <div class="sportsmagazine-featured-slider-layer">
                                     <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
-                                    <span class="sportsmagazine-black-transparent"></span>
+                                    <!-- <span class="sportsmagazine-black-transparent"></span> -->
                                     <div class="sportsmagazine-featured-caption">
-                                        <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                        <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading1}}</a><h5>
                                         <span class="sportsmagazine-color">{{$data->published_by}} </span>
                                     </div>
                                 </div>
