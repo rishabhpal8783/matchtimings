@@ -83,11 +83,12 @@ body h6 {
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 h2 {
-    font-size: 24px;
+    font-weight:600;
+    font-size: 26px;
 }
 
 h3 {
@@ -4197,7 +4198,7 @@ blockquote {
     line-height: 1.5;
 }
 
-blockquote:before {
+/* blockquote:before {
     content: "\f10e";
     font-family: FontAwesome;
     font-size: 40px;
@@ -4207,7 +4208,7 @@ blockquote:before {
     color: #999999;
     font-style: normal;
     opacity: 0.15;
-}
+} */
 
 blockquote:after {
     content: '';
@@ -11538,4 +11539,10 @@ ul.sportsmagazine-megalist li a:hover {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #bca418; 
+  }
+
+  .main_img_blg{
+    background-color: #004eff;
+    font-style: italic;
+    color:#fff;
   }

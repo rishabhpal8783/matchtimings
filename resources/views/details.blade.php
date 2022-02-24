@@ -33,9 +33,9 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                                 <h2>{{$articles_data->heading2}}</h2>
                             </div> 
                             <div class="col-md-8">
-                                        <div class="main_img_blg">
+                                        <div class="main_img_blg" >
                                     <img src="https://admin.matchtimings.com/assets/article/{{$articles_data->image}}" width="100%">
-                                    <p>{{$articles_data->image_desc}}</p>
+                                    <p style="border-top: 1px solid #fff; padding-left:10px;text-align:center;">{{$articles_data->image_desc}}</p>
                                     </div>
                             </div>
                             <div class="col-md-4">
