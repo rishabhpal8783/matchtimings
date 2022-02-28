@@ -56,7 +56,7 @@ class ScheduleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id,$name)
+    public function create($name,$id)
     {
         $sports_data=Sports::all();
         $sports_data1=Seasons::all();
@@ -82,9 +82,12 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id,$type,$name)
+    public function show($type,$name,$id)
     {
       
+$name=strtoupper($name);
+$type=strtoupper($type);
+
         $Players=Players::where('league_id',$id)->get();
         $name=(str_replace('-', ' ', $name));
         $League=League::where('league_name',$name)->first();
@@ -98,8 +101,10 @@ class ScheduleController extends Controller
         return view('fixture-detail',compact('Players','League','sports','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
 
-    public function sport($id,$name)
+    public function sport($name,$id)
     {
+        $name=strtoupper($name);
+
        $name=(str_replace('-', ' ', $name));
         $sports_data=Sports::all();
         $sports_data1=Sports::where('sport_id',$id)->first();
@@ -127,8 +132,14 @@ class ScheduleController extends Controller
         $articles_latest_data=Articles::where('season_id',$id)->latest('created')->limit(5)->get(); 
         return view('season-detail',compact('articles_latest_data','schedule_data1','id','name1','name2','name3','Players','sports','name','sports_data','sports_data1'));
     }
-    public function event($id,$uname,$type,$name)
-    {  
+    public function event($uname,$type,$name,$id)
+    { 
+        $name=strtoupper($name);
+        $uname=strtoupper($uname);
+        $type=strtoupper($type);
+        
+        
+        
       $id=$id;
         $sports=Seasons::all();
         $type=(str_replace('-', ' ', $type));

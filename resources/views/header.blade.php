@@ -87,7 +87,7 @@
                                         <ul class="nav navbar-nav">
                                             <li class="active"><a href="{{url('/')}}">Home</a></li>
                                             @foreach($sports_data as $data)
-                                            <li class="sportsmagazine-megamenu-li"><a href="{{url('/sport/'.$data->sport_id.'/'.str_replace(' ', '-', $data->sport_name))}}" >{{$data->sport_name}}</a>
+                                            <li class="sportsmagazine-megamenu-li"><a href="{{url('/sports/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.$data->sport_id)}}" >{{$data->sport_name}}</a>
 
                                                 <ul class="sportsmagazine-megamenu">
                                                    
@@ -96,10 +96,10 @@
                                                         @foreach($data->league as $leag)
                                                         <div class="col-md-4">
                                                          
-                                                        <div class="sportsmagazine-fancy-title"><h2 ><a style="color:#fff" href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h2></div>
+                                                        <div class="sportsmagazine-fancy-title"><h2 ><a style="color:#fff" href="{{url('/leagues/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.$leag->league_id)}}">{{$leag->league_name}}</a></h2></div>
                                                             <ul class="sportsmagazine-megalist">
                                                                 @foreach($leag->event as $events)
-                                                                <li><a href="{{url('/event/'.$events->event_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name))}}">{{$events->event_name}}</a></li>
+                                                                <li><a href="{{url('/events/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.strtolower(str_replace(' ', '-', $events->event_name)).'/'.$events->event_id)}}">{{$events->event_name}}</a></li>
                                                                 @endforeach
                                                             </ul>
                                                         </div>

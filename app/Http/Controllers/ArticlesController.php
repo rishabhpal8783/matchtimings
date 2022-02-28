@@ -142,7 +142,8 @@ public function blog_tag_detail($id,$name){
 }
 
 
-    public function match($id,$name){
+    public function match($name,$id){
+        $name=strtoupper($name);
         $name=(str_replace('-', ' ', $name));
         $sports_data=Sports::all();     
         $schedule_data=Schedules::where('team1_id',$id)->get();

@@ -149,7 +149,7 @@
                         <div class="popular_news_text">
 
 
-                            <h4><a href="{{url('/league/'.$leag->league_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name))}}">{{$leag->league_name}}</a></h4>
+                            <h4><a href="{{url('/leagues/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.$leag->league_id)}}">{{$leag->league_name}}</a></h4>
                             <ul class="">
                                 @foreach($leag->event as $events)
                                 <li  style="overflow:hidden;padding:10px;"><a  style="color: white;" >{{$events->event_name}}</a>
