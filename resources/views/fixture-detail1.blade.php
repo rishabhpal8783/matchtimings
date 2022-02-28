@@ -169,7 +169,7 @@
                                                         <ul class="">
                                                             @foreach($events->sesions as $event)
                                                             
-                                                            <li><a href="{{url('/season/'.$event->season_id.'/'.str_replace(' ', '-', $data->sport_name).'/'.str_replace(' ', '-', $leag->league_name).'/'.str_replace(' ', '-', $events->event_name).'/'.str_replace(' ', '-', $event->season_name))}}">{{$event->season_name}}</a></li>
+                                                            <li><a href="{{url('/seasons/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.strtolower(str_replace(' ', '-', $events->event_name)).'/'.strtolower(str_replace(' ', '-', $event->season_name)).'/'.$event->season_id)}}">{{$event->season_name}}</a></li>
                                                          
                                                             @endforeach
                                                         </ul>

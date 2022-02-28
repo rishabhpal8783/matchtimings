@@ -117,8 +117,16 @@ $type=strtoupper($type);
         
         return view('player-detail',compact('articles_latest_data','sports_data2','Players','sports','name','sports_data','sports_data1'));
     }
-    public function season($id,$name,$name1,$name2,$name3)
+    public function season($name,$name1,$name2,$name3,$id)
     {
+
+
+
+        $name=strtoupper($name);
+        $name1=strtoupper($name1);
+        $name2=strtoupper($name2);
+        $name3=strtoupper($name3);
+   
        $name=(str_replace('-', ' ', $name));
        $name1=(str_replace('-', ' ', $name1));
        $name2=(str_replace('-', ' ', $name2));
@@ -154,7 +162,7 @@ $type=strtoupper($type);
         $articles_latest_data=Articles::where('event_id',$id)->latest('created')->limit(5)->get(); 
         return view('fixture-detail1',compact('id','Players','Events','sports','uname','sports_data1','type','name','sports_data','articles_data','articles_latest_data','article_type'));
     }
-    public function player($id,$name)
+    public function player($name,$id)
     {  
         $sports_data1=Seasons::all();
         $users = DB::table('team_player_mapping')

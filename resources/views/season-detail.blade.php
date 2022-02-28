@@ -157,7 +157,7 @@
 </table>
 
 
-          <a href="{{url('/schedule/'.$id.'/'.$name3.'/Latest-Schedule-match-list-venue-dates-team-list')}}"  class="schedule-btn inline">Full Schedules</a> 
+          <a href="{{url('/schedules/'.strtolower($name3.'/Latest-Schedule-match-list-venue-dates-team-list')).'/'.$id}}"  class="schedule-btn inline">Full Schedules</a> 
 
      
 

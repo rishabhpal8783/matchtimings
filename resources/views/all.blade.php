@@ -50,7 +50,7 @@
                                                     @foreach($data->profile as $new) 
                                                     {{-- <button class="b2">{{$new->tag_type_name}}</button> --}}
                                       
-                                                    <a href="{{url('/tags/'.$new->tag_type_id.'/'.str_replace(' ', '-', $new->tag_type_name))}}" class="schedule-btn rt">{{$new->tag_type_name}}</a>
+                                                    <a href="{{url('/tags/'.strtolower(str_replace(' ', '-', $new->tag_type_name)).'/'.$new->tag_type_id)}}" class="schedule-btn rt">{{$new->tag_type_name}}</a>
                                                 </li>
                                                     @endforeach
                                                     @endif

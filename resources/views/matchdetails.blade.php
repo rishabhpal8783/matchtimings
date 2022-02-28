@@ -204,8 +204,8 @@
             <li class="col-md-6">
                 <figure><a href="{{url('player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}"><img src="extra-images/player-list-img1.jpg" alt=""><i class="fa fa-link"></i></a></figure>
                 <div class="sportsmagazine-player-list-text">
-                    <a href="{{url('player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}" class="sportsmagazine-forword-btn">Forword</a>
-                    <h5><a href="{{url('player/'.$item->player_id.'/'.str_replace(' ', '-', $item->player_name))}}">{{$item->player_name}}</a></h5>
+                    <a href="{{url('players/'.strtolower(str_replace(' ', '-', $item->player_name)).'/'.$item->player_id)}}" class="sportsmagazine-forword-btn">Forword</a>
+                    <h5><a href="{{url('players/'.strtolower(str_replace(' ', '-', $item->player_name)).'/'.$item->player_id)}}">{{$item->player_name}}</a></h5>
                  
                     <ul class="sportsmagazine-player-social">
                         <li><a href="https://www.facebook.com/" class="icon-facebook2"></a></li>
