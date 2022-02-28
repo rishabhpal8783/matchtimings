@@ -110,13 +110,23 @@ public function blog_tag_detail($name,$id){
  
     $name=(str_replace('-', ' ', $name));
     $articles_datap=Artictagmapping::where('tag_type_id',$id)->get();
+
+
+
+
+
     $articles_datap = DB::table('article_tag_mapping')
     ->join('articles', 'articles.article_id', '=', 'article_tag_mapping.article_id')    
     -> where('tag_type_id',$id)->get()->toArray();
+
+
+
+
     $articles_data=Articletype::where('article_type_name',$name)->first();
     $sports_data=Sports::all();
     foreach( $articles_datap as $value){
 
+       
          $value->profile= DB::table('article_tag_mapping')
          ->join('tag_types', 'article_tag_mapping.tag_type_id', '=', 'tag_types.tag_type_id')
          ->select('tag_types.tag_type_name', 'tag_types.tag_type_id')

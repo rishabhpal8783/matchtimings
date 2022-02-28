@@ -31,3 +31,9 @@ Route::get('details/{name}/{id}',[ArticlesController::class,'show'])->name('deta
 Route::get('seasons/{name}/{name1}/{name2}/{name3}/{id}',[ScheduleController::class,'season'])->name('season');
   Route::post('add_comment',[ScheduleController::class,'add_comment'])->name('add_comment');
 
+  Route::get('/privacy/policy',[ScheduleController::class,'privacy_policy']);
+
+
+  Route::get('/terms/condition',[ScheduleController::class,'terms_policy']);
+
+

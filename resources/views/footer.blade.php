@@ -50,7 +50,7 @@
                     <ul class="nav navbar-nav">
                                             <li class="active"><a href="{{url('/')}}">Home</a></li>
                                             @foreach($sports_data as $data)
-                                            <li class="sportsmagazine-megamenu-li"><a href="{{url('/sport/'.$data->sport_id.'/'.str_replace(' ', '-', $data->sport_name))}}" >{{$data->sport_name}}</a>
+                                            <li class="sportsmagazine-megamenu-li"><a href="{{url('/sports/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.$data->sport_id)}}" >{{$data->sport_name}}</a>
 
                                             </li>
                                             @endforeach
@@ -76,8 +76,8 @@
                 </aside>
                 <aside class="col-md-6 sportsmagazine-copyright-right">
                     <ul class="sportsmagazine-copyright-link">
-                        <li><a href="404.html" class="sportsmagazine-colorhover">Terms And Condition</a></li>
-                        <li><a href="404.html" class="sportsmagazine-colorhover">Privacy Policy</a></li>
+                        <li><a href="{{url('/terms/condition')}}" class="sportsmagazine-colorhover">Terms And Condition</a></li>
+                        <li><a href="{{url('/privacy/policy')}}" class="sportsmagazine-colorhover">Privacy Policy</a></li>
                     </ul>
                 </aside>
             </div>

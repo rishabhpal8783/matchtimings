@@ -65,6 +65,26 @@ class ScheduleController extends Controller
         return view('schedule',compact('sports_data','schedule_data','sports_data1'));
     }
 
+
+
+    public function privacy_policy()
+    {
+       
+
+        $sports_data=Sports::all();
+      
+        //$schedule_data=Schedules::latest('created')->get();
+        return view('privacy_policy',compact('sports_data'));
+    }
+    public function terms_policy()
+    {
+       
+        $sports_data=Sports::all();
+      
+        //$schedule_data=Schedules::latest('created')->get();
+        return view('terms_condition',compact('sports_data'));
+    }
+    
     /**
      * Store a newly created resource in storage.
      *

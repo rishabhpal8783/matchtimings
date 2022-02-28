@@ -230,8 +230,12 @@
                                         <tbody>
                                         <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
                                             <ul class="row">
-                                                @foreach( $schedule_data as $data)
-                                           
+                                                @foreach( $schedule_data1 as $data)
+                                  
+                                                @if ($data->season_id==$itam->season_id)    
+                                               <?php $i =  0 ;
+                                                if($i <10){ ?>
+
                                                 <li class="col-md-12">
                                                     <div class="sportsmagazine-fixture-wrap">
                                                         <div class="sportsmagazine-teams-match">
@@ -264,8 +268,14 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                            @endforeach
-
+                                           <?php  $i++;
+                                        }
+?>
+                                   
+                                            
+                                    @endif
+                                  
+                                @endforeach
                                             </ul>
                                           
                                         </div>
@@ -298,14 +308,14 @@
                             
                                 <li class="col-md-3 sportsmagazine-the-team">
                                     <figure>
-                                        <a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
+                                        <a href="{{url('details/'.strtolower(str_replace(' ', '-', $type_data->article_type_name)).'/'.$data->article_id)}}"><img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}"></a>
                                         <figcaption>
                                             {{-- <span><small>The Team</small></span> --}}
                                             {{-- <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a> --}}
                                         </figcaption>
                                     </figure>
                                     <section>
-                                        <h2><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
+                                        <h2><a href="{{url('details/'.strtolower(str_replace(' ', '-', $type_data->article_type_name)).'/'.$data->article_id)}}">{{$data->heading1}}</a></h2>
                                         <p>{{substr($data->summary_outline_description,0,157)}}</p>
                                     </section>
                                     <div class="sportsmagazine-blog-grid-options">
