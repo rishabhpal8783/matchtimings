@@ -83,11 +83,12 @@ body h6 {
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 h2 {
-    font-size: 24px;
+    font-weight:600;
+    font-size: 26px;
 }
 
 h3 {
@@ -3938,7 +3939,7 @@ ul li:last-child .sportsmagazine-blog-list-wrap {
 .sportsmagazine-contact-form form p input[type="text"] {
     float: left;
     width: 88%;
-    font-size: 10px;
+    font-size: 20px;
     background: none;
     margin: 0px;
     color: #999999;
@@ -3984,7 +3985,7 @@ ul li:last-child .sportsmagazine-blog-list-wrap {
 
 .sportsmagazine-contact-form form p textarea {
     height: 150px;
-    font-size: 10px;
+    font-size: 20px;
     padding: 12px 21px 0px 16px;
     color: #505050;
     border: 1px solid #ececec;
@@ -4197,7 +4198,7 @@ blockquote {
     line-height: 1.5;
 }
 
-blockquote:before {
+/* blockquote:before {
     content: "\f10e";
     font-family: FontAwesome;
     font-size: 40px;
@@ -4207,7 +4208,7 @@ blockquote:before {
     color: #999999;
     font-style: normal;
     opacity: 0.15;
-}
+} */
 
 blockquote:after {
     content: '';
@@ -4612,6 +4613,9 @@ blockquote span:before {
 
 .comment-respond.sportsmagazine-contact-form {
     margin-bottom: 33px;
+    border: 1px solid #999999;
+    padding: 40px;
+}
 }
 
 .sportsmagazine-related-article.sportsmagazine-blog-artical {
@@ -9187,11 +9191,11 @@ a:hover {
 .sportsmagazine-classic-heading {
     float: left;
     width: 100%;
-    padding: 5px 0px 0px 5px;
+   
     position: relative;
 }
 
-.sportsmagazine-classic-heading:before {
+/* .sportsmagazine-classic-heading:before {
     content: '';
     position: absolute;
     left: 0px;
@@ -9209,7 +9213,7 @@ a:hover {
     width: 5px;
     height: 93%;
     background-color: #ffdc11;
-}
+} */
 
 .sportsmagazine-classic-heading h2 {
     margin: 0px;
@@ -10620,6 +10624,50 @@ a:hover {
     border-left: 10px solid #3a3a3a;
     border-bottom: 16px solid transparent;
 }
+.widget_twitter ul li i.fa-facebook {
+    float: left;
+    width: 31px;
+    height: 32px;
+    background-color: #3a3a3a;
+    color: #1dcaff;
+    text-align: center;
+    padding-top: 8px;
+    position: relative;
+    font-size: 16px;
+    padding-left: 3px;
+}
+
+.widget_twitter ul li i.fa-facebook:after {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: 0px;
+    border-top: 16px solid transparent;
+    border-left: 10px solid #3a3a3a;
+    border-bottom: 16px solid transparent;
+}
+.widget_twitter ul li i.fa-instagram {
+    float: left;
+    width: 31px;
+    height: 32px;
+    background-color: #3a3a3a;
+    color: #1dcaff;
+    text-align: center;
+    padding-top: 8px;
+    position: relative;
+    font-size: 16px;
+    padding-left: 3px;
+}
+
+.widget_twitter ul li i.fa-instagram:after {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: 0px;
+    border-top: 16px solid transparent;
+    border-left: 10px solid #3a3a3a;
+    border-bottom: 16px solid transparent;
+}
 
 .widget_twitter ul li span {
     float: left;
@@ -11491,4 +11539,10 @@ ul.sportsmagazine-megalist li a:hover {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #bca418; 
+  }
+
+  .main_img_blg{
+    background-color: #004eff;
+    font-style: italic;
+    color:#fff;
   }

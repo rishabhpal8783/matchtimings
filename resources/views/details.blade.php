@@ -23,73 +23,36 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
             <!--// Main Section \\-->
 
 			<!--// Main Section \\-->
-			<div class="sportsmagazine-main-section">
+			<div class="sportsmagazine-main-section" style="padding-top:40px;">
 				<div class="container">
 					<div class="row">
 
                         <div class="col-md-9">
                         <div class="row">
-                                <div class="col-md-8">
-                                        <div class="main_img_blg">
+                            <div class="col-md-12">
+                                <h2>{{$articles_data->heading2}}</h2>
+                            </div> 
+                            <div class="col-md-8">
+                                        <div class="main_img_blg" >
                                     <img src="https://admin.matchtimings.com/assets/article/{{$articles_data->image}}" width="100%">
+                                    <p style="border-top: 1px solid #fff; padding-left:10px;text-align:center;">{{$articles_data->image_desc}}</p>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
                                     <div class="sportsmagazine-rich-editor">
                                         <blockquote>{{$articles_data->summary_outline_description}}
                                             <span></span>
-                                            </blockquote>
-                                            <p>{{$articles_data->image_desc}}</p>
-                                    
-                                            <p>{{$articles_data->detail_description}}</p>
+                                            </blockquote>            
                                     
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                            <p>{{$articles_data->detail_description}}</p>
+                            </div> 
                            
-                            <div class="sportsmagazine-rich-editor">
-                             
-                               
-                               
-                               
-                                <div class="sportsmagazine-post-tags">
-                                  {{-- <div class="sportsmagazine-tags">
-                                     <a href="404.html">#Playoffs</a>
-                                     <a href="404.html">#Injuries</a>
-                                     <a href="404.html">#Teams</a>
-                                     <a href="404.html">#Uniform</a>
-                                  </div> --}}
-                                  <div class="sportsmagazine-blog-social">
-                                     <ul>
-                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=@php echo $actual_link; @endphp" class="color-one"><i class="fa fa-facebook"></i>facebook</a></li>
-                                        <li><a href="https://twitter.com/intent/tweet?url=@php echo $actual_link; @endphp" class="color-two"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                        {{-- <li><a href="https://plus.google.com/" class="color-three"><i class="fa fa-google-plus"></i>Google+</a></li> --}}
-                                     </ul>
-                                  </div>
-                               </div>
-                            </div>
-                            {{-- <div class="sportsmagazine-prenxt-post">
-                                <ul>
-                                    <li>
-                                        <div class="sportsmagazine-prev-post">
-                                            <figure><a href="404.html"><img src="extra-images/post-img1.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-prev-artical">
-                                                <h3><a href="404.html">The team is starting a new power breakfast regimen</a></h3>
-                                                <a href="404.html" class="sportsmagazine-post-arrow"><i class="fa fa-angle-double-left"></i> Previous Post</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="sportsmagazine-next-post">
-                                            <figure><a href="404.html"><img src="extra-images/post-img2.jpg" alt=""></a></figure>
-                                            <div class="sportsmagazine-next-artical">
-                                                <h3><a href="404.html">The team is starting a new power breakfast regimen</a></h3>
-                                                <a href="404.html" class="sportsmagazine-post-arrow">Next Post <i class="fa fa-angle-double-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> --}}
+                            
+                         
                             <div class="sportsmagazine-section-heading"><h2>Related Articles</h2></div>
                             <div class="sportsmagazine-related-article sportsmagazine-blog-artical">
                                 <ul class="row">

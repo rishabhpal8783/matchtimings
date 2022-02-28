@@ -10,7 +10,7 @@
                                 <ul>
                                     @foreach ($sports_data1 as $item)
                                     <li>
-                                        <span style="padding-top:0px">{{$item->season_id}}</span>
+                                        <!-- <span style="padding-top:0px">{{$item->season_id}}</span> -->
                                         <div class="popular_news_text">
                                            
                                             <a href="{{url('/schedules/'.strtolower(str_replace(' ', '-', $item->season_name.'/latest-schedule-match-list-venue-dates-team-list')).'/'.$item->season_id)}}">{{$item->season_name}}</a>
@@ -64,9 +64,9 @@
                                 @if($type_data->article_type_id==$data->article_type_id)
                                 <div class="sportsmagazine-featured-slider-layer">
                                     <img src="https://admin.matchtimings.com/assets/article/{{$data->image}}" alt="{{$data->image}}">
-                                    <span class="sportsmagazine-black-transparent"></span>
+                                    <!-- <span class="sportsmagazine-black-transparent"></span> -->
                                     <div class="sportsmagazine-featured-caption">
-                                        <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading2}}</a><h5>
+                                        <h5><a href="{{url('details/'.str_replace(' ', '-', $type_data->article_type_name).'/'.$data->article_id)}}">{{$data->heading1}}</a><h5>
                                         <span class="sportsmagazine-color">{{$data->published_by}} </span>
                                     </div>
                                 </div>
@@ -138,58 +138,7 @@
                                         </div>
                                         <!--// Main Section \\-->
                                     </div>
-                                    <div role="tabpanel" class="tab-pane" id="profile">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="widget_popular_news">
-                                            <ul>
-                                                <li class="widget-theleague">
-                                                    <div class="popular_news_text">
-                                                        <small>The League</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="popular_news_text">
-                                                        <small>The Team</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                                <li class="widget-injuries">
-                                                    <div class="popular_news_text">
-                                                        <small>Injuries</small>
-                                                        <a href="blog-detail.html">Basketball Stadium will  a max capacity for 5000 fans</a>
-                                                        <time datetime="2008-02-14 20:00">December 21, 2017</time>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante. Curabitur lacinia diam tempus.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                
                                 </div>
                     </div>
                   </div>
@@ -277,42 +226,49 @@
                             @foreach ($sports_data1 as $itam)
                                  <div role="tabpanel" class="tab-pane {{ $itam->season_id == 1 ? 'active' : '' }}" id="home{{ $itam->season_id }}" class="active">
 
-                                    <table class="sportsmagazine-client-detail">
-                                        <tbody>
-                                    @foreach( $schedule_data1 as $data)
-                                  
-                                    @if ($data->season_id==$itam->season_id)    
-                                   <?php
-                                    $i =  0 ;
-                                    if($i <5){ ?>
-
-
-
-
-                                            <tr>
-                                                <td><time datetime="{{$data->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($data->created));}}</a></time></td>
-                                                <td>
-                                                    <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teama->team_name))}}">{{$data->teama->team_name}}</a></h6>
+                                 <div class="main_shdl">     
+                                </div>
+                                <!-- Tab panes -->
+                                <div class="tab-content on_ho">
+                                    <div role="tabpanel" class="tab-pane active" id="home">
+                                        <!--// Main Section \\-->
+                                        <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
+                                            <ul class="row">
+                                                @foreach( $schedule_data as $data)
+                                           
+                                                <li class="col-md-12">
+                                                    <div class="sportsmagazine-fixture-wrap">
+                                                        <div class="sportsmagazine-teams-match">
+                                                            <div class="sportsmagazine-first-team">
+                                                                <figure><img src="{{$data->teama->team_logo}}" alt=""></figure>
+                                                                <div class="sportsmagazine-first-team-info">
+                                                                    <h6 style="font-size: 16px;"><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teama->team_name))}}">{{$data->teama->team_name}}</a></h6>
+                                                                    {{-- <span>Bepop Institute</span> --}}
+                                                                 
+                                                                    <span class="view_all"><a href="{{url('/match/'.$data->teama->team_id.'/'.str_replace(' ', '-', $data->teama->team_name))}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sportsmagazine-match-view">
+                                                                <span>VS</span>
+                                                            </div>
+                                                            <div class="sportsmagazine-second-team">
+                                                                <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
+                                                                <div class="sportsmagazine-second-team-info">
+                                                                    <h6 style="font-size: 16px;"><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teamb->team_name))}}">{{$data->teamb->team_name}}</a></h6>
+                                                                    {{-- <span>Marine College</span> --}}
+                                                                    <span class="view_all"><a href="{{url('/match/'.$data->teamb->team_id.'/'.str_replace(' ', '-', $data->teamb->team_name))}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sportsmagazine-buy-ticket">
+                                                            <div class="sportsmagazine-buy-ticket-text">
+                                                                <time datetime="{{$data->created}}" class="dt"><a href="{{url('/match/'.str_replace(' ', '-', $data->created))}}">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
+                                                                <h5><a href="{{url('/match/'.str_replace(' ', '-', $data->countries->name))}}">{{$data->countries->name}}</a></h5>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </td>
-                                                <td><span>VS</span></td>
-                                                <td>
-                                                    <figure><img src="{{$data->teamb->team_logo}}" alt=""></figure>
-                                                    <div class="player-stats-text">
-                                                        <h6><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teamb->team_name))}}">{{$data->teamb->team_name}}</a></h6>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                          <?php  $i++;
-                                        }
-                                            ?>
-                                   
-                                            
-                                    @endif
-                                  
-                                @endforeach
+                                                </li>
+                                            @endforeach
 
                             </tbody>
                         </table>

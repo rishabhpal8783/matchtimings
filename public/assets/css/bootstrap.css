@@ -8681,6 +8681,9 @@ button.close {
 
 .sportsmagazine-fixture-thumb .thumb-transparent {
     background-color: #000;
+    background-image: url("../extra-images/bg_head.png");
+    background-size: cover;
+    background-position: bottom;
     opacity: 0.9;
 }
 

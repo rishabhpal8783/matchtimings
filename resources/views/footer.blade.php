@@ -9,44 +9,36 @@
                 <aside class="col-md-4 widget widget_contact_info">
                     <a href="index-2.html" class="footer-logo"><img src="{{url('assets/images/mt_logo.png')}}" alt=""></a>
                     <p>In this Website, you will get the latest news related to sports such as cricket , IPL football and all types of sports.</p>
-                    <ul class="sportsmagazine-social-network">
-                        <li>
-                            <a href="https://www.facebook.com/Matchtimings" class="sportsmagazine-colorhover fa fa-facebook-official"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/matchtimings" class="sportsmagazine-colorhover fa fa-twitter-square"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/matchtimings/" class="sportsmagazine-colorhover fa fa-instagram"></a>
-                        </li>
-                    </ul>
+                   
                     <ul class="sportsmagazine-info-list">
                        
-                        <li><i class="fa fa-envelope"></i> <span><a href="mailto:name@email.com">info@example.com</a></span></li>
+                        <li><i class="fa fa-envelope"></i> <span><a href="mailto:info@matchtimngs.com">info@matchtimngs.com</a></span></li>
                     </ul>
                 </aside>
                 <!--// Widget Contact Info \\-->
                 <!--// Widget Twitter \\-->
-                <aside class="col-md-4 widget widget_twitter">
+                <aside class="col-md-3 widget widget_twitter">
                     <div class="footer-widget-title">
-                        <h2>Twitter Feeds</h2>
+                        <h2>Social Connect</h2>
                     </div>
                     <ul>
                         <li>
-                            <i class="fa fa-twitter"></i> <span>@basketball</span>
-                            <p>Sed gravida, urna quis tempus sollicitudin, tellus urnasuscipit nisl, id rhoncus ligula elit condimentum <a href="404.html">https://t.co/XHrPAM4ANv</a></p>
-                            <time datetime="2008-02-14 20:00"><i class="fa fa-clock-o"></i> 2 Hours Ago</time>
+                            <i class="fa fa-facebook"></i> <span><a href="https://www.facebook.com/Matchtimings" class="sportsmagazine-colorhover ">Facebook</a></span>
+                          
                         </li>
                         <li>
-                            <i class="fa fa-twitter"></i> <span>@football</span>
-                            <p>Sed gravida, urna quis tempus sollicitudin, tellus urnasuscipit nisl, id rhoncus ligula elit condimentum <a href="404.html">https://t.co/XHrPAM4ANv</a></p>
-                            <time datetime="2008-02-14 20:00"><i class="fa fa-clock-o"></i> 4 Hours Ago</time>
+                            <i class="fa fa-instagram"></i> <span><a href="https://www.instagram.com/matchtimings/" class="sportsmagazine-colorhover ">Instagram</a></span>
+                          
+                        </li>
+                        <li>
+                            <i class="fa fa-twitter"></i> <span> <a href="https://twitter.com/matchtimings" class="sportsmagazine-colorhover ">Twitter</a></span>
+                           
                         </li>
                     </ul>
                 </aside>
                 <!--// Widget Twitter \\-->
                 <!--// Widget Gallery \\-->
-                <aside class="col-md-4 widget widget_gallery">
+                <aside class="col-md-5 widget widget_gallery">
                     <div class="footer-widget-title">
                         <h2>Our Sports</h2>
                     </div>

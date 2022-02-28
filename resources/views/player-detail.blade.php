@@ -127,12 +127,12 @@
 			 <div class="widget widget_trending_news">
                          <div class="sportsmagazine-fancy-title"><h2>{{$name}}</h2></div>
                     
-                    <div class="widget_popular_news">
+                    <div class="widget_popular_news" style="padding:10px;">
                          <div class="sportsmagazine-rich-editor">
                     <p>{!!$sports_data1->description!!}</p>
-                     <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
+                     <!-- <blockquote>Sed gravida, urna quis tempus sollicitudin, tellus urna suscipit nisl, id rhoncus ligula elit condi Suspendisse lacinia, risus et porta dignissim, elit tellus iaculis tellus, eget efficitur elit magna ellus tempor consectetur magna.
                      <span></span>
-                 </blockquote>
+                 </blockquote> -->
                  </div>
             </div>
           <div class="sportsmagazine-fancy-title"><h2>{{$name}}</h2></div>
