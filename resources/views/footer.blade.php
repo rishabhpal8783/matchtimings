@@ -6,7 +6,8 @@
         <div class="container">
             <div class="row">
                 <!--// Widget Contact Info \\-->
-                <aside class="col-md-4 widget widget_contact_info">
+                <aside class="col-md-4">
+                    <div class=" widget widget_contact_info" style="box-shadow: none !important;">
                     <a href="index-2.html" class="footer-logo"><img src="{{url('assets/images/mt_logo.png')}}" alt=""></a>
                     <p>In this Website, you will get the latest news related to sports such as cricket , IPL football and all types of sports.</p>
                    
@@ -14,11 +15,13 @@
                        
                         <li><i class="fa fa-envelope"></i> <span><a href="mailto:info@matchtimngs.com">info@matchtimngs.com</a></span></li>
                     </ul>
+                </div>
                 </aside>
                 <!--// Widget Contact Info \\-->
                 <!--// Widget Twitter \\-->
-                <aside class="col-md-3 widget widget_twitter">
-                    <div class="footer-widget-title">
+                <aside class="col-md-3">
+                    <div class=" widget widget_twitter" style="box-shadow: none !important;">
+                    <div class="footer-widget-title" >
                         <h2>Social Connect</h2>
                     </div>
                     <ul>
@@ -35,10 +38,12 @@
                            
                         </li>
                     </ul>
+                </div>
                 </aside>
                 <!--// Widget Twitter \\-->
                 <!--// Widget Gallery \\-->
-                <aside class="col-md-5 widget widget_gallery">
+                <aside class="col-md-5">
+                    <div class=" widget widget_gallery" style="box-shadow: none !important;">
                     <div class="footer-widget-title">
                         <h2>Our Sports</h2>
                     </div>
@@ -52,6 +57,7 @@
                                           </ul>
                                             </li>
                                         </ul>
+                                    </div>
                 </aside>
                 <!--// Widget Gallery \\-->
 
