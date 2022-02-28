@@ -541,6 +541,12 @@ address {
     text-transform: uppercase;
     position: relative;
 }
+@media (min-width: 1000px) and (max-width: 1250px) {
+    .navbar-nav>li>a {
+        font-size: 12px;
+       
+    }
+}
 
 .navbar-nav>li>a:before {
     content: '';

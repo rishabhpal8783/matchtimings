@@ -14,7 +14,7 @@
                                         <div class="popular_news_text">
                                            
                                             <a href="{{url('/schedules/'.strtolower(str_replace(' ', '-', $item->season_name.'/latest-schedule-match-list-venue-dates-team-list')).'/'.$item->season_id)}}">{{$item->season_name}}</a>
-                                            <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time>
+                                            <!-- <time datetime="{{$item->created}}" class="dt"><a href="#">{{date('d F Y | H:i', strtotime($item->created));}}</a></time> -->
                                         </div>
                                     </li>
                                     @endforeach
@@ -205,7 +205,7 @@
             </div>
             <div class="col-md-12">
             <div class="widget widget_trending_news">
-                        <div class="sportsmagazine-classic-heading">
+            <div class="sportsmagazine-classic-heading">
                             <h2>Coming Up</h2>
                         </div>
                         <div class="scroll">
@@ -226,12 +226,8 @@
                             @foreach ($sports_data1 as $itam)
                                  <div role="tabpanel" class="tab-pane {{ $itam->season_id == 1 ? 'active' : '' }}" id="home{{ $itam->season_id }}" class="active">
 
-                                 <div class="main_shdl">     
-                                </div>
-                                <!-- Tab panes -->
-                                <div class="tab-content on_ho">
-                                    <div role="tabpanel" class="tab-pane active" id="home">
-                                        <!--// Main Section \\-->
+                                    <table class="sportsmagazine-client-detail">
+                                        <tbody>
                                         <div class="sportsmagazine-fixture sportsmagazine-fixture-list sportsmagazine-fixture-mini-list">
                                             <ul class="row">
                                                 @foreach( $schedule_data as $data)
@@ -245,7 +241,7 @@
                                                                     <h6 style="font-size: 16px;"><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teama->team_name))}}">{{$data->teama->team_name}}</a></h6>
                                                                     {{-- <span>Bepop Institute</span> --}}
                                                                  
-                                                                    <span class="view_all"><a href="{{url('/match/'.$data->teama->team_id.'/'.str_replace(' ', '-', $data->teama->team_name))}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                                    <span class="view_all"><a href="{{url('/matchs/'.strtolower(str_replace(' ', '-', $data->teama->team_name)).'/'.$data->teama->team_id)}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                                 </div>
                                                             </div>
                                                             <div class="sportsmagazine-match-view">
@@ -256,23 +252,27 @@
                                                                 <div class="sportsmagazine-second-team-info">
                                                                     <h6 style="font-size: 16px;"><a href="{{url('/match-details/'.str_replace(' ', '-', $data->teamb->team_name))}}">{{$data->teamb->team_name}}</a></h6>
                                                                     {{-- <span>Marine College</span> --}}
-                                                                    <span class="view_all"><a href="{{url('/match/'.$data->teamb->team_id.'/'.str_replace(' ', '-', $data->teamb->team_name))}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
+                                                                    <span class="view_all"><a href="{{url('/matchs/'.strtolower(str_replace(' ', '-', $data->teama->team_name)).'/'.$data->teama->team_id)}}">View Matchs</a> <i class="fa fa-chevron-right"></i></span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="sportsmagazine-buy-ticket">
                                                             <div class="sportsmagazine-buy-ticket-text">
-                                                                <time datetime="{{$data->created}}" class="dt"><a href="{{url('/match/'.str_replace(' ', '-', $data->created))}}">{{date('d F Y | H:i', strtotime($data->created));}}</a></time>
-                                                                <h5><a href="{{url('/match/'.str_replace(' ', '-', $data->countries->name))}}">{{$data->countries->name}}</a></h5>
+                                                                {{-- <time datetime="{{$data->created}}" class="dt"><a href="{{url('/match/'.str_replace(' ', '-', $data->created))}}">{{date('d F Y | H:i', strtotime($data->created));}}</a></time> --}}
+                                                                <h5><a href="{{url('/matchs/'.strtolower(str_replace(' ', '-', $data->teama->team_name)).'/'.$data->teama->team_id)}}">{{$data->countries->name}}</a></h5>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </li>
                                             @endforeach
 
+                                            </ul>
+                                          
+                                        </div>
+
                             </tbody>
                         </table>
-                                   <a href="{{url('/schedules/'.strtolower(str_replace(' ', '-', $itam->season_name.'/latest-schedule-match-list-venue-dates-team-list')).'/'.$itam->season_id)}}"  class="schedule-btn inline">Full Schedules</a> 
+                                   <a href="{{url('/schedule/'.$itam->season_id.'/'.str_replace(' ', '-', $itam->season_name.'/Latest-Schedule-match-list-venue-dates-team-list'))}}"  class="schedule-btn inline">Full Schedules</a> 
 
                                 
                                  </div>
@@ -281,6 +281,7 @@
 
 
                     </div>
+             
                     @foreach($article_type as $type_data)
                     @if($type_data->article_type_name!='Recent News')
                     <div class="sportsmagazine-fancy-title">
