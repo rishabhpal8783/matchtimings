@@ -40,7 +40,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                             </div>
                             <div class="col-md-4">
                                     <div class="sportsmagazine-rich-editor">
-                                        <blockquote>{{$articles_data->summary_outline_description}}
+                                        <blockquote>{!!$articles_data->summary_outline_description!!}
                                             <span></span>
                                             </blockquote>            
                                     
@@ -48,7 +48,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                                 </div>
                             </div>
                             <div class="col-md-12">
-                            <p>{{$articles_data->detail_description}}</p>
+                            <p>{!!$articles_data->detail_description!!}</p>
                             </div> 
                            
                             

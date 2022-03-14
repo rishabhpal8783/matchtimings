@@ -320,12 +320,17 @@
                                     </section>
                                     <div class="sportsmagazine-blog-grid-options">
                                         <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><span><strong>Published By  </strong></span>{{$data->published_by}}</a>
-                                        {{-- <ul>
-                                            <li><i class="fa fa-thumbs-o-up"></i> <a href="404.html">320</a></li>
-                                            <li><i class="fa fa-eye"></i> <a href="404.html">840</a></li>
-                                            <li><i class="fa fa-share-alt"></i> <a href="404.html">89</a></li>
-                                        </ul> --}}
+                                         <li >
+                                                    @if(count($data->profile)>0)
+                                                    @foreach($data->profile as $new) 
+                                                    {{-- <button class="b2">{{$new->tag_type_name}}</button> --}}
+                                      
+                                                    <a href="{{url('/tags/'.strtolower(str_replace(' ', '-', $new->tag_type_name)).'/'.$new->tag_type_id)}}" class="schedule-btn rt">{{$new->tag_type_name}}</a>
+                                                </li>
+                                                    @endforeach
+                                                    @endif
                                     </div>
+                                    
                                 </li>
                                 @endif
                               @endforeach

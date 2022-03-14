@@ -33,6 +33,20 @@ class ArticlesController extends Controller
        $schedule_data=Schedules::latest('created')->limit(5)->get();
        $schedule_data1=Schedules::all();
        $articles_data=Articles::latest('created')->get();
+
+       foreach( $articles_data as $value){
+
+
+ 
+
+             $value->profile= DB::table('article_tag_mapping')
+             ->join('tag_types', 'article_tag_mapping.tag_type_id', '=', 'tag_types.tag_type_id')
+             ->select('tag_types.tag_type_name', 'tag_types.tag_type_id')
+            -> where('article_id',$value->article_id)->get();
+            }
+
+
+
        $articles_latest_data=Articles::latest('created')->limit(10)->get();
        $article_mapping=Articlecountrymapping::all();
        $article_type=Articletype::all(); 
@@ -47,6 +61,7 @@ class ArticlesController extends Controller
       -> where('season_id','1')->get()->toArray();
        return view('index',compact('count','sports_data1','article_type2','articles_data','article_mapping','article_type','article_type1','sports_data','recent_stories_data','articles_latest_data','schedule_data','userdata1','schedule_data1'));
     }
+
 
     /**
      * Show the form for creating a new resource.

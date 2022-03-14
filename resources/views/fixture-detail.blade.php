@@ -134,12 +134,15 @@
           
                                                 <h4 ><a style="display: none;" href="{{url('/leagues/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.$leag->league_id)}}">{{$leag->league_name}}</a></h4>
                                                 <ul class="">
-                                                    @foreach($leag->event as $events)
-                                                    <li><a href="{{url('/events/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.strtolower(str_replace(' ', '-', $events->event_name)).'/'.$events->event_id)}}">{{$events->event_name}}</a></li>
-                                                    @endforeach
+
+                                                    
+                                                     @foreach($leag->event as $events)
+                                                                <li><a href="{{url('/events/'.strtolower(str_replace(' ', '-', $data->sport_name)).'/'.strtolower(str_replace(' ', '-', $leag->league_name)).'/'.strtolower(str_replace(' ', '-', $events->event_name)).'/'.$events->event_id)}}">{{$data->sport_name}}</a></li>
+                                                                @endforeach
                                                 </ul>
                                              
-                                            </div>@endif
+                                            </div>
+                                            @endif
                                             @endforeach
                                            
                                         </li>
